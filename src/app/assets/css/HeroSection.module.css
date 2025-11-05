@@ -51,29 +51,15 @@ ined directly in styles */
     display: inline-block;
     position: relative;
   }
-  
-  .headerHero-title-top {
+  .headerHero-title-top,
+  .headerHero-logo-text {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 4rem;
-    font-weight: 900;
-    color: #d4af37;
-    margin-bottom: 35px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: headerHeroFadeInUp 0.8s ease forwards 0.2s;
-  
-    /* Enhanced 3D Text Effect */
-    text-shadow: 3px 3px 0px rgb(255, 215, 0),
-      6px 6px 0px rgb(51, 51, 51);
-    background: linear-gradient(45deg, #d4af37, rgb(62, 62, 61));
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-  
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    position: relative;
+    font-weight: 1000;
+    color: #d4af37; /* Gold tone consistent with logo */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
   .headerHero-title-main {
@@ -421,7 +407,7 @@ ined directly in styles */
   @media (max-width: 1200px) {
     .headerHero-title-top {
       font-size: 3.5rem;
-    }
+         }
     
     .headerHero-content-wrapper {
       margin-top: 100px;
@@ -437,7 +423,8 @@ ined directly in styles */
   @media (min-width: 992px) and (max-width: 1199px) {
     .headerHero-title-top {
       font-size: 3rem;
-    }
+
+      }
     
     .headerHero-title-main {
       font-size: 1.8rem;
@@ -485,6 +472,8 @@ ined directly in styles */
   @media (max-width: 767px) {
     .headerHero-title-top {
       font-size: 2.5rem;
+      /* font-weight: 1000; */
+     
     }
     
     .headerHero-title-main {
