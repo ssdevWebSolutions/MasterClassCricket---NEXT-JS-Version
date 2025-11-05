@@ -215,8 +215,9 @@ export default function HeroSection() {
                     href="https://masterclass-cricket.classforkids.io" 
                     className={`${styles['headerHero-btn']} ${styles['headerHero-primary-btn']}`}
                   >
-                    <span className={styles['headerHero-btn-text']}>MAY Half Term Registration</span>
-                    <span className={styles['headerHero-btn-icon']}>
+<span className={styles['headerHero-btn-text']}>
+  <span style={{ color: 'blue' }}>Winter</span> Clinics Registration
+</span>                    <span className={styles['headerHero-btn-icon']}>
                     <i className="fa-solid fa-angle-right"></i>
 
                     </span>

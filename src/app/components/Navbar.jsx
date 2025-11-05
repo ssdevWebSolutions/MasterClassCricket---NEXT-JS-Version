@@ -150,7 +150,7 @@ export default function Navbar() {
           
           <li className={`${styles['headerHero-nav-item']} ${styles['headerHero-nav-cta']}`}>
             <a
-              href="https://wa.me/447961692226"
+              href="https://masterclassbookings-rt5n.vercel.app/"
               className={styles['headerHero-book-now-btn']}
               target="_blank"
               rel="noopener noreferrer"
