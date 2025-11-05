@@ -286,3 +286,49 @@
       padding: 0 0.5rem;
     }
   }
+
+  /* Base link style */
+.animated-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Underline effect */
+.animated-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+/* Arrow styling */
+.animated-link .arrow {
+  display: inline-block;
+  margin-left: 8px; /* space between text and arrow */
+  font-size: 16px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.animated-link:hover::after {
+  width: 100%;
+}
+
+.animated-link:hover .arrow {
+  transform: translateY(-5px); /* arrow moves upward */
+}
+
+.animated-link:hover {
+  color: #ffd700; /* optional hover color (gold) */
+}

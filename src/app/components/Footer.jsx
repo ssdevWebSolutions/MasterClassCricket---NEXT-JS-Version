@@ -93,6 +93,18 @@ const Footer = () => {
               <li className={styles.linkItem}>
                 <Link href="/contact" className={styles.link}>Contact Us</Link>
               </li>
+              <li className="mb-2">
+  <a
+    href="/SafeguardingPolicy.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`${styles.animatedLink} ${styles.link}`}
+  >
+    Safeguarding Policy
+    <span className={styles.arrow}>↑</span>
+  </a>
+</li>
+
             </ul>
           </div>
 
