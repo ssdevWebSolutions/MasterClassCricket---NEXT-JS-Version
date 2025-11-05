@@ -337,6 +337,8 @@ const ContactSection = () => {
               strokeLinecap="round" />
           </svg>
         </div>
+        
+         {/* Cricket Bats */}
 
         {/* Cricket Bats */}
         <div className={`${styles.contactUsBat} ${styles.contactUsBat1}`}>
