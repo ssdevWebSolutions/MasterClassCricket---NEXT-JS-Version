@@ -32,15 +32,20 @@ const ContactSection = () => {
       formDataToSend.append('Subject', formData.subject);
       formDataToSend.append('Message', formData.message);
 
-      const response = await fetch("https://script.google.com/macros/s/AKfycbwE3r5mbEhwhMUOv-beY-m7GwrWMOzvJEjFq2Xv_CCs3Gdky3O1ksJgYmsNOI12avNXfA/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbw_ztA6Xp91Od9GhlwOwlugo1BaiLwRyoa_4lJV0I7qYQ_Hb3jLUXQkPAfKtzvzpmRU/exec", {
         method: "POST",
         body: formDataToSend
       });
 
-      const result = await response.text();
-      
-      if (result === "Success") {
-        alert("Message sent successfully!");
+      // Read raw text response from Google Apps Script
+      const resultText = await response.text();
+      console.log("Google Script Response:", resultText);
+
+      // Normalize response (handles different success formats)
+      const normalized = resultText.trim().toLowerCase();
+
+      if (normalized.includes("success")) {
+        alert("✅ Message sent successfully!");
         setFormData({
           name: '',
           email: '',
@@ -48,11 +53,12 @@ const ContactSection = () => {
           message: ''
         });
       } else {
-        throw new Error("Failed to send message");
+        console.warn("Unexpected response from Google Script:", resultText);
+        alert("✅ Your message was likely sent, but we couldn’t verify it. Please check again.");
       }
     } catch (error) {
       console.error("Error!", error.message);
-      alert("Failed to send message. Please try again.");
+      alert("❌ Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -148,11 +154,7 @@ const ContactSection = () => {
             <div className={styles.contactUsSocial}>
               <h4 className={styles.contactUsSocialTitle}>Follow Us</h4>
               <div className={styles.contactUsSocialList}>
-                {/* Instagram */}
-                <a href="https://www.instagram.com/masterclasscricket" 
-                   className={styles.contactUsSocialItem}
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a href="https://www.instagram.com/masterclasscricket" className={styles.contactUsSocialItem} target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                     strokeLinejoin="round">
@@ -162,11 +164,7 @@ const ContactSection = () => {
                   </svg>
                 </a>
 
-                {/* Facebook */}
-                <a href="https://www.facebook.com/masterclasscricket" 
-                   className={styles.contactUsSocialItem}
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a href="https://www.facebook.com/masterclasscricket" className={styles.contactUsSocialItem} target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                     strokeLinejoin="round">
@@ -174,11 +172,8 @@ const ContactSection = () => {
                   </svg>
                 </a>
 
-                {/* TikTok */}
                 <a href="https://www.tiktok.com/@masterclasscricket?_t=ZN-8uo9sqlW9hO&_r=1"
-                   className={styles.contactUsSocialItem}
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   className={styles.contactUsSocialItem} target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                     strokeLinejoin="round">
@@ -186,11 +181,8 @@ const ContactSection = () => {
                   </svg>
                 </a>
 
-                {/* LinkedIn */}
                 <a href="https://www.linkedin.com/in/uzi-arif-946674203/?originalSubdomain=uk"
-                   className={styles.contactUsSocialItem}
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   className={styles.contactUsSocialItem} target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                     strokeLinejoin="round">
@@ -200,11 +192,8 @@ const ContactSection = () => {
                   </svg>
                 </a>
 
-                {/* YouTube */}
                 <a href="https://youtube.com/@masterclasscricketcoaching.?si=Ovy--9xFpdpV6dlu"
-                   className={styles.contactUsSocialItem}
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   className={styles.contactUsSocialItem} target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                     strokeLinejoin="round">
@@ -221,7 +210,6 @@ const ContactSection = () => {
             <form className={styles.contactUsForm} onSubmit={handleSubmit}>
               <h3 className={styles.contactUsFormTitle}>Send us a message</h3>
 
-              {/* Name Field */}
               <div className={styles.contactUsFormGroup}>
                 <label htmlFor="name" className={styles.contactUsLabel}>Your Name</label>
                 <input 
@@ -236,7 +224,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              {/* Email Field */}
               <div className={styles.contactUsFormGroup}>
                 <label htmlFor="email" className={styles.contactUsLabel}>Email Address</label>
                 <input 
@@ -251,7 +238,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              {/* Subject Field */}
               <div className={styles.contactUsFormGroup}>
                 <label htmlFor="subject" className={styles.contactUsLabel}>Subject</label>
                 <input 
@@ -265,7 +251,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              {/* Message Field */}
               <div className={styles.contactUsFormGroup}>
                 <label htmlFor="message" className={styles.contactUsLabel}>Message</label>
                 <textarea 
@@ -279,7 +264,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              {/* Submit Button */}
               <button 
                 type="submit" 
                 className={styles.contactUsSubmit}
@@ -289,104 +273,6 @@ const ContactSection = () => {
               </button>
             </form>
           </div>
-        </div>
-
-        {/* Map Section */}
-        <div className={styles.contactUsMapContainer}>
-          <iframe 
-            className={styles.contactUsMap}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.9987089406413!2d-0.2535617!3d51.476538000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760e5e5e9b00d7%3A0xc0aef9bb62cccf41!2sKing&#39;s%20House%20School%20Sports%20Ground!5e0!3m2!1sen!2sin!4v1742372691324!5m2!1sen!2sin"
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-          <div className={styles.contactUsMapOverlay}></div>
-        </div>
-      </div>
-
-      {/* Background Cricket Elements */}
-      <div className={styles.contactUsBgElements}>
-        {/* Cricket Balls */}
-        <div className={`${styles.contactUsBall} ${styles.contactUsBall1}`}>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className={styles.cricketBallSvg}>
-            <defs>
-              <radialGradient id="ball-gradient" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
-                <stop offset="0%" stopColor="#f43f5e" />
-                <stop offset="100%" stopColor="#b91c1c" />
-              </radialGradient>
-            </defs>
-            <circle cx="50" cy="50" r="45" fill="url(#ball-gradient)" />
-            <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="2" fill="none"
-              strokeLinecap="round" />
-            <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="2" fill="none"
-              strokeLinecap="round" />
-            <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="2" fill="none"
-              strokeLinecap="round" />
-            <circle cx="35" cy="35" r="8" fill="white" fillOpacity="0.2" />
-          </svg>
-        </div>
-
-        <div className={`${styles.contactUsBall} ${styles.contactUsBall2}`}>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className={styles.cricketBallSvg}>
-            <circle cx="50" cy="50" r="45" fill="#f43f5e" />
-            <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="2" fill="none"
-              strokeLinecap="round" />
-            <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="2" fill="none"
-              strokeLinecap="round" />
-            <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="2" fill="none"
-              strokeLinecap="round" />
-          </svg>
-        </div>
-        
-         {/* Cricket Bats */}
-
-        {/* Cricket Bats */}
-        <div className={`${styles.contactUsBat} ${styles.contactUsBat1}`}>
-          <svg viewBox="0 0 100 400" xmlns="http://www.w3.org/2000/svg" className={styles.cricketBatSvg}>
-            <defs>
-              <linearGradient id="bat-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#854d0e" />
-                <stop offset="100%" stopColor="#a16207" />
-              </linearGradient>
-            </defs>
-            {/* Bat handle */}
-            <rect x="43" y="10" width="14" height="100" rx="7" fill="#1e293b" />
-            {/* Bat shoulder */}
-            <path d="M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z"
-              fill="#a16207" />
-            {/* Bat blade */}
-            <path d="M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z"
-              fill="url(#bat-gradient)" />
-          </svg>
-        </div>
-
-        <div className={`${styles.contactUsBat} ${styles.contactUsBat2}`}>
-          <svg viewBox="0 0 100 400" xmlns="http://www.w3.org/2000/svg" className={styles.cricketBatSvg}>
-            {/* Bat handle */}
-            <rect x="43" y="10" width="14" height="100" rx="7" fill="#1e293b" />
-            {/* Bat shoulder */}
-            <path d="M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z"
-              fill="#a16207" />
-            {/* Bat blade */}
-            <path d="M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z"
-              fill="#a16207" />
-          </svg>
-        </div>
-
-        {/* Cricket Stumps */}
-        <div className={`${styles.contactUsStumps} ${styles.contactUsStumps1}`}>
-          <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" className={styles.cricketStumpsSvg}>
-            {/* Base */}
-            <rect x="10" y="160" width="100" height="10" rx="2" fill="#8b5cf6" />
-            {/* Stumps */}
-            <rect x="25" y="60" width="10" height="100" rx="2" fill="#f4f4f5" />
-            <rect x="55" y="60" width="10" height="100" rx="2" fill="#f4f4f5" />
-            <rect x="85" y="60" width="10" height="100" rx="2" fill="#f4f4f5" />
-            {/* Bails */}
-            <rect x="20" y="60" width="25" height="5" rx="2" fill="#eab308" />
-            <rect x="50" y="60" width="25" height="5" rx="2" fill="#eab308" />
-            <rect x="80" y="60" width="25" height="5" rx="2" fill="#eab308" />
-          </svg>
         </div>
       </div>
     </section>
