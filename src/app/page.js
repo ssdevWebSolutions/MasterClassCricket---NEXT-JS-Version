@@ -86,7 +86,7 @@ export const metadata = {
 
 const Main = () => {
   return <>
-  <Popup />
+  {/* <Popup /> */}
   <LoadingScreen />
     <Navbar />
     <HeroSection />
