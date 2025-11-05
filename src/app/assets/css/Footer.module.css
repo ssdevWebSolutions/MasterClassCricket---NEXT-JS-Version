@@ -1,0 +1,288 @@
+/* Footer Base Styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 3rem 0 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aboutColumn {
+    max-width: 350px;
+  }
+  
+  /* Logo and About Section */
+  .logoLink {
+    display: block;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+  }
+  
+  .logo {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .aboutText {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socialLink {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .socialLink:hover {
+    color: #fbbf24;
+    transform: translateY(-2px);
+  }
+  
+  /* Column Titles */
+  .columnTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+  
+  /* Quick Links */
+  .linksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .linkItem {
+    margin-bottom: 1rem;
+  }
+  
+  .link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .link:hover {
+    color: #fbbf24;
+  }
+  
+  /* Contact Information */
+  .contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+  }
+  
+  .contactItem i {
+    color: #fbbf24;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+    min-width: 18px;
+    font-size: 1.1rem;
+  }
+  
+  .contactItem span {
+    color: #fff;
+    line-height: 1.5;
+  }
+  
+  /* YouTube Subscribe Section */
+  .youtubeSubscribe {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subscribeText {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .subscribeButton {
+    background-color: #dc2626;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: fit-content;
+    font-size: 1rem;
+  }
+  
+  .subscribeButton:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+  
+  /* Divider */
+  .divider {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    height: 1px;
+    background-color: #374151;
+    opacity: 0.6;
+  }
+  
+  /* Copyright */
+  .copyright {
+    text-align: center;
+    color: #fff;
+    font-size: 0.95rem;
+  }
+  
+  .copyright p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .developer {
+    color: #fbbf24;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .row {
+      grid-template-columns: 1.3fr 1fr 1fr 1.1fr;
+      gap: 2.5rem;
+    }
+    
+    .container {
+      padding: 0 1.5rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .row {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    
+    .container {
+      padding: 0 1rem;
+    }
+    
+    .footer {
+      padding: 2.5rem 0 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .row {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    
+    .footer {
+      padding: 2rem 0 1.5rem;
+    }
+    
+    .aboutColumn {
+      max-width: none;
+    }
+    
+    .logoLink {
+      margin-bottom: 1rem;
+    }
+    
+    .columnTitle {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .aboutText,
+    .subscribeText {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding: 0 1rem;
+    }
+    
+    .footer {
+      padding: 1.5rem 0 1rem;
+    }
+    
+    .socialLinks {
+      gap: 0.8rem;
+    }
+    
+    .socialLink {
+      width: 36px;
+      height: 36px;
+      font-size: 1.2rem;
+    }
+    
+    .columnTitle {
+      font-size: 1.1rem;
+    }
+    
+    .aboutText,
+    .subscribeText,
+    .link,
+    .contactItem {
+      font-size: 0.9rem;
+    }
+    
+    .subscribeButton {
+      padding: 0.7rem 1.2rem;
+      width: 100%;
+      max-width: 200px;
+    }
+    
+    .copyright {
+      font-size: 0.85rem;
+      padding: 0 0.5rem;
+    }
+  }

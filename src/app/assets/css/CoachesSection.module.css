@@ -1,0 +1,402 @@
+/* Premium Coaches Section Styling */
+.coachesPremiumSection {
+    background-color: #000;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="%23D4AF37" stroke-width="1" fill="none" opacity="0.2"/></svg>');
+    background-size: auto;
+    background-position: center;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.coachesPremiumSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.coachesContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Heading Styles */
+.coachesHeadingWrapper {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.coachesHeading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #D4AF37;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.coachesHeadingUnderline {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    margin: 0 auto 15px;
+}
+
+.coachesSubheading {
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Carousel Styles */
+.coachesCarouselContainer {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 60px;
+}
+
+.coachesCarousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.coachesCarousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Coach Card Styles */
+.coachCard {
+    flex: 0 0 auto;
+    width: 320px;
+    height: 480px;
+    perspective: 1500px;
+    position: relative;
+}
+
+.coachCardInner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.coachCard:hover .coachCardInner {
+    transform: rotateY(180deg);
+}
+
+.coachCardFront,
+.coachCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.coachCardFront {
+    background: linear-gradient(to bottom, #1a1a1a, #0f0f0f);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.coachCardBack {
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Coach Image & Info Styles */
+.coachImageContainer {
+    width: 100%;
+    height: 85%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to top, #000, #222);
+}
+
+.coachImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-out;
+}
+
+.coachCard:hover .coachImage {
+    transform: scale(1.08);
+}
+
+.coachCredentials {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(212, 175, 55, 0.9);
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.8rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.coachInfoPreview {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.8), transparent);
+    text-align: center;
+}
+
+.coachName {
+    color: #D4AF37;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.coachTitle {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Coach Details Styles */
+.coachDetails {
+    text-align: center;
+}
+
+.coachSeparator {
+    width: 50px;
+    height: 3px;
+    background: #D4AF37;
+    margin: 15px auto;
+}
+
+.coachBio {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.coachBioMentor {
+    color: #ddd;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.coachAchievements {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.achievementBadge {
+    background: rgba(212, 175, 55, 0.15);
+    color: #D4AF37;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.coachSocial {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #D4AF37;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.socialLink:hover {
+    background: #D4AF37;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Navigation Buttons */
+.coachesNavBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.coachesPrevBtn {
+    left: 0;
+}
+
+.coachesNextBtn {
+    right: 0;
+}
+
+.coachesNavBtn:hover {
+    background: #D4AF37;
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Indicators */
+.coachesIndicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 8px;
+}
+
+.indicatorDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicatorDot.active {
+    background: #D4AF37;
+    transform: scale(1.2);
+}
+
+/* Cricket Ball Animation */
+.coachesPremiumSection::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="%23D4AF37" opacity="0.1"/><path d="M50,5 C50,5 50,95 50,95" stroke="white" stroke-width="2" fill="none" opacity="0.3"/><path d="M50,5 C65,20 65,80 50,95" stroke="white" stroke-width="2" fill="none" opacity="0.3"/><path d="M50,5 C35,20 35,80 50,95" stroke="white" stroke-width="2" fill="none" opacity="0.3"/></svg>');
+    background-size: contain;
+    bottom: -50px;
+    right: 10%;
+    animation: floatBall 15s infinite linear;
+    opacity: 0.5;
+}
+
+@keyframes floatBall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .coachesHeading {
+        font-size: 3rem;
+    }
+    .coachCard {
+        width: 280px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .coachesPremiumSection {
+        padding: 60px 0;
+    }
+    .coachesHeading {
+        font-size: 2.5rem;
+    }
+    .coachesSubheading {
+        font-size: 1rem;
+    }
+    .coachCard {
+        width: 260px;
+        height: 400px;
+    }
+    .coachName {
+        font-size: 1.4rem;
+    }
+    .coachBio {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .coachesHeading {
+        font-size: 2rem;
+    }
+    .coachesHeadingWrapper {
+        margin-bottom: 40px;
+    }
+    .coachCard {
+        width: 240px;
+        height: 360px;
+    }
+    .coachCredentials {
+        font-size: 0.7rem;
+    }
+    .coachesCarouselContainer {
+        padding: 0 40px;
+    }
+    .coachesNavBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
