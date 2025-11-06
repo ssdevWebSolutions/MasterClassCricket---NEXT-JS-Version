@@ -409,30 +409,120 @@
   transform: scale(1.15);
 }
 
-/* Booking Chatbot Floating Button */
-.bookingFloatBtn {
+/* Floating Chatbot Button */
+.chatbotButton {
   position: fixed;
   bottom: 100px;
   right: 20px;
-  background-color: gold;
-  color: black;
+  background: gold;
+  color: white;
+  border: none;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 26px;
   cursor: pointer;
-  z-index: 1000;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
   animation: jump 2s infinite ease-in-out;
-  transition: transform 0.2s ease-in-out;
 }
 
-.bookingFloatBtn:hover {
-  transform: scale(1.15);
+.chatbotButton.hide {
+  display: none;
 }
+
+/* Jump animation */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Chat Window */
+.chatWindow {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatHeader {
+  background: gold;
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chatBody {
+  padding: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.botText {
+  background: gold;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.serviceBtn {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.chatFooter {
+  background: black;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.footerBtn {
+  flex: 1;
+  background: gold;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+}
+
 
 /* Jumping Animation */
 @keyframes jump {
@@ -451,110 +541,3 @@
 }
 
 
-/* Chatbot Window */
-.chatbotWindow {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  width: 300px;
-  background-color: black;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-  animation: fadeIn 0.3s ease-in-out;
-  font-family: 'Inter', sans-serif;
-}
-
-.chatHeader {
-  background-color: gold;
-  color: black;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-}
-
-.closeChat {
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.chatBody {
-  padding: 10px;
-  max-height: 300px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.botMsg {
-  background-color: gold;
-  border-radius: 10px;
-  padding: 8px 12px;
-  align-self: flex-start;
-  font-size: 14px;
-}
-
-.userMsg {
-  background-color: gold;
-  color: black;
-  border-radius: 10px;
-  padding: 8px 12px;
-  align-self: flex-end;
-  font-size: 14px;
-}
-
-.serviceOptions {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.serviceBtn {
-  background-color: gold;
-  color: black;
-  border: none;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.serviceBtn:hover {
-  background-color: gold;
-}
-
-.serviceLink {
-  display: inline-block;
-  margin-top: 6px;
-  color: black;
-  text-decoration: underline;
-  font-size: 13px;
-}
-
-.chatFooter {
-  background-color:gold;
-  padding: 8px;
-  text-align: center;
-  border-top: 1px solid #eee;
-}
-
-.chatFooter button {
-  background-color: gold;
-  color: black;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.chatFooter button:hover {
-  background-color: gold;
-}
