@@ -1,0 +1,187 @@
+/* ===========================
+   Advertisement / Updates Bar
+   =========================== */
+
+   .adBar {
+    width: 100%;
+    background-color: #000;
+    color: #d4af37;
+    overflow: hidden;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    white-space: nowrap;
+    position: relative;
+    z-index: 900;
+    margin-top: 2%;
+  }
+  
+  /* Marquee wrapper */
+  .marquee {
+  
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    /* border: 2px solid white; */
+  }
+  
+  /* Track for seamless scrolling */
+  .track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  /* Scroll text items */
+  .item {
+    display: inline-block;
+    margin-right: 100px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #d4af37;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  .item:hover {
+    color: #ffffff;
+  }
+  
+  /* Pause animation on hover */
+  .marquee:hover .track {
+    animation-play-state: paused;
+  }
+  
+  /* ===========================
+     Keyframes - Seamless Scroll
+     =========================== */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* ===========================
+     Responsive Adjustments
+     =========================== */
+  
+  /* 💻 Large Screens (Desktops > 1200px) */
+  @media (min-width: 1200px) {
+    .marquee {
+      height: 50px;
+      margin-top: 6%;
+      /* border: 2px solid white; */
+    }
+    .item {
+      font-size: 1.2rem;
+      margin-right: 120px;
+    }
+    .track {
+      animation-duration: 18s;
+    }
+  }
+  
+  /* 🖥️ Medium Screens (Laptops & Tablets Landscape 992px–1199px) */
+  @media (max-width: 1199px) and (min-width: 992px) {
+    .adBar {
+        margin-top: 5%;
+    }
+    .marquee {
+      height: 45px;
+      margin-top: 6%;
+      /* border: 2px solid white; */
+    }
+    .item {
+      font-size: 1rem;
+      margin-right: 90px;
+    }
+    .track {
+      animation-duration: 22s;
+    }
+  }
+  
+  /* 📱 Tablets (768px–991px) */
+  @media (max-width: 991px) and (min-width: 768px) {
+    .adBar {
+        margin-top: 5%;
+    }
+    .marquee {
+      height: 40px;
+      margin-top: 6%;
+      /* border: 2px solid white; */
+    }
+    .item {
+      font-size: 0.95rem;
+      margin-right: 70px;
+    }
+    .track {
+      animation-duration: 25s;
+    }
+  }
+  
+  /* 📲 Mobiles (481px–767px) */
+  @media (max-width: 767px) and (min-width: 481px) {
+    .adBar {
+        margin-top: 5%;
+    }
+    .marquee {
+      height: 38px;
+      margin-top: 6%;
+      /* border: 2px solid white; */
+    }
+    .item {
+      font-size: 0.9rem;
+      margin-right: 55px;
+    }
+    .track {
+      animation-duration: 28s;
+    }
+  }
+  
+  /* 📞 Extra Small Devices (≤480px) */
+  @media (max-width: 480px) {
+    .adBar {
+        margin-top: 10%;
+    }
+    .marquee {
+      height: 35px;
+      margin-top: 6%;
+      /* border: 2px solid white; */
+    }
+    .item {
+      font-size: 0.8rem;
+      margin-right: 40px;
+      letter-spacing: 0.3px;
+    }
+    .track {
+      animation-duration: 32s; /* slower for readability */
+    }
+  }
+  
+ /* 📱 Ultra Small Devices (≤320px) */
+@media (max-width: 320px) {
+    .adBar {
+      margin-top: 12%; /* a bit more spacing for smaller height screens */
+    }
+  
+    .marquee {
+      height: 32px;
+      margin-top: 6%;
+      /* border: 2px solid white; */ /* optional debug line */
+    }
+  
+    .item {
+      font-size: 0.7rem;          /* smaller text for narrow width */
+      margin-right: 30px;         /* reduced spacing */
+      letter-spacing: 0.2px;      /* tighter spacing for small width */
+    }
+  
+    .track {
+      animation-duration: 36s;    /* slower for readability on tiny screens */
+    }
+  }
+  
