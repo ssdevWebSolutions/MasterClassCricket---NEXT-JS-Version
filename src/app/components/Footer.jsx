@@ -1,12 +1,115 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../assets/css/Footer.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+
+
+
 const Footer = () => {
+  const [showChat, setShowChat] = useState(false);
+  const [chatMessages, setChatMessages] = useState([]);
+  const [showServices, setShowServices] = useState(true);
+
+
+  // Service json data
+   const servicesData = [
+    {
+      id: 1,
+      name:'1-2-1 Coaching Sessions',
+      description:
+       'Tailored Training for Every Cricketer',
+      link: '/services/private-coaching',
+    },
+    {
+      id: 2,
+      name: 'Small Group Sessions',
+      description:
+        'Train with Peers, Excel Together',
+      link: '/services/group-sessions',
+    },
+    {
+      id: 3,
+      name: 'Masterclass Academy Sessions',
+      description:
+        'Structured Training for Age-Group Development',
+      link: '/services/holiday-camps',
+    },
+    {
+      id: 4,
+      name: 'Elite Performance Clinics',
+      description:
+        'For Cricketers Who Aspire to Be the Best.',
+      link: '/services/video-analysis',
+    },
+    {
+      id: 5,
+      name: 'Tours for Clubs and Members',
+      description:
+        'Experience Cricket in Different Conditions',
+      link: '/services/video-analysis',
+    },
+    {
+      id: 6,
+      name: 'Corporate Team-Building Events',
+      description:
+        'Cricket as a Tool for Leadership & Teamwork',
+      link: '/services/video-analysis',
+    },
+    {
+      id: 7,
+      name: 'Online Bowling Assessments',
+      description:
+        'Get Expert Feedback—Anytime, Anywhere',
+      link: '/services/video-analysis',
+    },
+    {
+      id: 8,
+      name: 'School Coaching Programmes',
+      description:
+        'Bringing expert coaching to schools through teacher training and high-quality student masterclasses.',
+      link: '/services/video-analysis',
+    },
+    {
+      id: 9,
+      name: 'Online Batting Assessments',
+      description:
+        'Analyse, Adjust, Improve',
+      link: '/services/video-analysis',
+    },
+    {
+      id: 10,
+      name: 'Mental Mind Mapping Course',
+      description:
+        'Masterclass Mind Mapping',
+      link: '/services/video-analysis',
+    }
+  ];
+
+  // when user selects the service
+  const handleServiceClick = (service) => {
+    setChatMessages((prev) => [
+      ...prev,
+      { sender: 'user', text: service.name },
+      {
+        sender: 'bot',
+        text: `${service.description}`,
+        link: service.link,
+      },
+    ]);
+    setShowServices(false);
+  };
+
+
+    // Reset / start chat again
+  const restartChat = () => {
+    setChatMessages([]);
+    setShowServices(true);
+  };
+
   return (
     <>
       {/* Floating WhatsApp Button */}
@@ -21,13 +124,72 @@ const Footer = () => {
       </a>
 
       {/* Booking Chatbot Floating Button */}
-      <div
+     {/* <div
         className={styles.bookingFloatBtn}
-      
+         onClick={() => setShowChat(!showChat)}
         aria-label="Open Booking Chat"
       >
         💬
-      </div>
+      </div> */}
+
+     {/* Chatbot Window */}
+      {showChat && (
+        <div className={styles.chatbotWindow}>
+          <div className={styles.chatHeader}>
+            <span>Bookings Assistant</span>
+            <span className={styles.closeChat} onClick={() => setShowChat(false)}>
+              &times;
+            </span>
+          </div>
+
+          <div className={styles.chatBody}>
+            {chatMessages.length === 0 && (
+              <div className={styles.botMsg}>
+                👋 Hi there! Welcome to Masterclass!
+                Please choose one of our services below 👇
+              </div>
+            )}
+
+            {/* Service buttons */}
+            {showServices && (
+              <div className={styles.serviceOptions}>
+                {servicesData.map((service) => (
+                  <button
+                    key={service.id}
+                    className={styles.serviceBtn}
+                    onClick={() => handleServiceClick(service)}
+                  >
+                    {service.name}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Chat messages */}
+            {chatMessages.map((msg, index) => (
+              <div
+                key={index}
+                className={
+                  msg.sender === 'bot' ? styles.botMsg : styles.userMsg
+                }
+              >
+                {msg.text}
+                {msg.link && (
+                  <div>
+                    <a href={msg.link} className={styles.serviceLink}>
+                      🔗 View Service
+                    </a>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.chatFooter}>
+            <button onClick={restartChat}>Back</button>
+          </div>
+        </div>
+      )}
 
 
             
