@@ -86,14 +86,14 @@ export const metadata = {
 
 const Main = () => {
   return <>
-  {/* <Popup /> */}
-  <LoadingScreen />
+    {/* <Popup /> */}
+    <LoadingScreen />
     <Navbar />
     <HeroSection />
     <VideoSection />
     <CricketServicesSection />
     <SocialMediaSection />
-    <CoachesSection />
+    {/* <CoachesSection /> */}
     <PartnersSection />
     <SocialStatsSection />
     <ContactSection />

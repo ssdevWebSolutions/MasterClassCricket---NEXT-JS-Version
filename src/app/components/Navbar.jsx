@@ -92,9 +92,11 @@ export default function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
     { href: '/Founders', label: 'Meet The Owner' },
+    { href: '/meet-the-coaches', label: 'Meet The Coaches' }, // 👈 ADD THIS
     { href: '/testimonials', label: 'Testimonials' },
     { href: '/contact', label: 'Contact Us' }
   ];
+
 
   // Function to check if current path is active
   const isActiveLink = (href) => {
@@ -137,17 +139,16 @@ export default function Navbar() {
         >
           {navItems.map((item) => (
             <li key={item.href} className={styles['headerHero-nav-item']}>
-              <Link 
-                href={item.href} 
-                className={`${styles['headerHero-nav-link']} ${
-                  isActiveLink(item.href) ? styles.active : ''
-                }`}
+              <Link
+                href={item.href}
+                className={`${styles['headerHero-nav-link']} ${isActiveLink(item.href) ? styles.active : ''
+                  }`}
               >
                 {item.label}
               </Link>
             </li>
           ))}
-          
+
           <li className={`${styles['headerHero-nav-item']} ${styles['headerHero-nav-cta']}`}>
             <a
               href="https://masterclassbookings-rt5n.vercel.app/"
