@@ -124,13 +124,13 @@ const Footer = () => {
       </a>
 
       {/* Booking Chatbot Floating Button */}
-      <div
+     {/* <div
         className={styles.bookingFloatBtn}
          onClick={() => setShowChat(!showChat)}
         aria-label="Open Booking Chat"
       >
         💬
-      </div>
+      </div> */}
 
      {/* Chatbot Window */}
       {showChat && (
