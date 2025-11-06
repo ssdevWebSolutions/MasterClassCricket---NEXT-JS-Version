@@ -2,6 +2,7 @@ import ContactSection from "./components/ContactSection";
 import CricketServicesSection from "./components/CricketServicesSection";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import AdvertisementBar from "./components/AdvertisementBar";
 import SocialStatsSection from "./components/SocialStatsSection";
 import CoachesSection from "./homepage/CoachesSection";
 import HeroSection from "./homepage/HeroSection";
@@ -89,6 +90,7 @@ const Main = () => {
   {/* <Popup /> */}
   <LoadingScreen />
     <Navbar />
+    <AdvertisementBar />
     <HeroSection />
     <VideoSection />
     <CricketServicesSection />
