@@ -5,14 +5,16 @@ import FoundersLetter from "./FoundersLetter"
 import ContactSection from "../components/ContactSection";
 import SocialStatsSection from "../components/SocialStatsSection";
 import Footer from "../components/Footer";
-const Founders =()=>{
+import Popup from "../components/Popup";
+const Founders = () => {
     return <>
-     {/* <LoadingScreen /> */}
+        <LoadingScreen />
         <Navbar />
         <FoundersLetter />
         <ContactSection />
-     <SocialStatsSection />
-     <Footer />
+        <SocialStatsSection />
+        <Footer />
+        <Popup />
 
     </>
 }

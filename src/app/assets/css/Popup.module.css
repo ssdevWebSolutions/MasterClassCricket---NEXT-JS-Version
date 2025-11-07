@@ -1,168 +1,176 @@
 /* Popup Overlay */
 .popupOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .popupOverlay.hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  /* Popup Box */
-  .popupBox {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #aa272b;
-    padding: 20px;
-    max-height: 80vh;
-    overflow-y: auto;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .popupOverlay.hidden .popupBox {
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-  
-  /* Close Button */
-  .closeBtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: black;
-    background: white;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 50%;
-    border: none;
-    transition: all 0.3s ease;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    font-weight: bold;
-  }
-  
-  .closeBtn:hover {
-    background: #f0f0f0;
-    transform: scale(1.1);
-  }
-  
-  /* Image inside popup */
-  .popupImg {
-    width: 100%;
-    max-width: 350px;
-    cursor: pointer;
-    border-radius: 10px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
-  
-  .popupImg:hover {
-    transform: scale(1.02);
-  }
-  
-  /* Redirect Button */
-  .redirectBtn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 80%;
-    transition: all 0.3s ease;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .redirectBtn:hover {
-    background: #faeb33;
-    color: black;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 900px) {
-    .popupBox {
-      width: 70%;
-      padding: 15px;
-    }
-    
-    .popupImg {
-      max-width: 90%;
-    }
-  }
-  
-  @media (max-width: 425px) {
-    .popupBox {
-      width: 80%;
-      max-width: 90%;
-    }
-    
-    .popupImg {
-      max-width: 90%;
-    }
-  }
-  
-  @media (min-width: 426px) and (max-width: 768px) {
-    .popupBox {
-      width: 70%;
-    }
-    
-    .popupImg {
-      max-width: 100%;
-    }
-  }
-  
-  @media (min-height: 500px) and (max-height: 600px) {
-    .popupBox {
-      margin-top: 8%;
-    }
-    
-    .popupImg {
-      padding-top: 200px;
-      height: auto;
-    }
-  }
-  
-  @media (min-height: 600px) and (max-height: 700px) {
-    .popupBox {
-      margin-top: 8%;
-    }
-    
-    .popupImg {
-      padding-top: 50px;
-      height: auto;
-    }
-  }
-  
-  @media (min-height: 700px) and (max-height: 900px) {
-    .popupBox {
-      margin-top: 6%;
-    }
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popupOverlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Popup Box */
+.popupBox {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #aa272b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Close Button */
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  background: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* Image */
+.popupImg {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.popupImg:hover {
+  transform: scale(1.02);
+}
+
+/* Learn More Button */
+.redirectBtn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 80%;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.redirectBtn:hover {
+  background: #faeb33;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Modal Styles ========== */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  text-align: left;
+}
+
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.termsBox {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 15px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 15px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.checkboxArea {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.bookNowBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.disabledBtn {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.activeBtn {
+  background: #0a7a2b;
+  color: white;
+}
+
+.activeBtn:hover {
+  background: #0f9b3a;
+}
