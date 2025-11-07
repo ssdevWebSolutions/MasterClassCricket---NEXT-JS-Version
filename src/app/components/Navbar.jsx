@@ -92,6 +92,7 @@ export default function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
     { href: '/Founders', label: 'Meet The Owner' },
+    { href: '/masterclass_elite_cricket_academy.jsx', label: 'Elite Academy' },
     { href: '/meet-the-coaches', label: 'Meet The Coaches' }, // 👈 ADD THIS
     { href: '/testimonials', label: 'Testimonials' },
     { href: '/contact', label: 'Contact Us' }
