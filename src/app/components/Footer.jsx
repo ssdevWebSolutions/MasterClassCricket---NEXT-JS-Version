@@ -105,12 +105,12 @@ const Footer = () => {
 
       {/* Booking Chatbot Floating Button */}
           {/* Floating Chatbot Button */}
-      <button
+      {/* <button
         className={`${styles.chatbotButton} ${chatOpen ? styles.hide : ''}`}
         onClick={() => setChatOpen(true)}
       >
         💬
-      </button>
+      </button> */}
 
       {/* Chatbot Window */}
       {chatOpen && (
