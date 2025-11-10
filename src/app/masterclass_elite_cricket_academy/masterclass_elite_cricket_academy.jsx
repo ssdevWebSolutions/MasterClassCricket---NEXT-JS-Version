@@ -15,16 +15,25 @@ const MasterclassEliteCricketAcademy = () => {
             </section> */}
 
             <section className="hero-section">
-                <div className="hero-image">
-                    <div className="hero-overlay-content">
-                    <h1 className="hero-title">Masterclass Elite  Academy Programme</h1>
-                    {/* <p className="hero-description">
-                        High-performance cricket coaching for the most promising young players in the Home Counties, built to mirror professional standards.
-                    </p> */}
+            <div className="hero-image">
+                <div className="hero-overlay-content">
+                <h1 className="hero-title">Masterclass Elite Academy Programme</h1>
+                {/* <p className="hero-description">
+                    High-performance cricket coaching for the most promising young players in the Home Counties, built to mirror professional standards.
+                </p> */}
+
+                <a 
+                    href="https://masterclass-cricket.classforkids.io/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
                     <button className="book-btn">Book a Trial</button>
-                    </div>
+                </a>
+                
                 </div>
+            </div>
             </section>
+
 
 
             <section className="about-section">
