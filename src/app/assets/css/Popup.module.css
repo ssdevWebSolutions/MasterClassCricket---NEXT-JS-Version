@@ -1,3 +1,7 @@
+/* ===========================
+   Base Popup & Modal Styles
+=========================== */
+
 /* Popup Overlay */
 .popupOverlay {
   position: fixed;
@@ -26,10 +30,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: #aa272b;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   z-index: 1001;
   display: flex;
   flex-direction: column;
@@ -44,7 +48,7 @@
   right: 10px;
   color: black;
   background: white;
-  padding: 5px 10px;
+  padding: 6px 10px;
   cursor: pointer;
   font-size: 16px;
   border-radius: 50%;
@@ -95,7 +99,6 @@
 }
 
 /* ========== Modal Styles ========== */
-
 .modalOverlay {
   position: fixed;
   inset: 0;
@@ -173,4 +176,153 @@
 
 .activeBtn:hover {
   background: #0f9b3a;
+}
+
+/* ===========================
+   Responsive Design Fixes
+=========================== */
+
+/* ✅ Small Phones (≤ 375px) */
+@media (max-width: 375px) {
+  .popupBox {
+    width: 94%;
+    padding: 18px 12px;
+    max-height: 95vh;
+    top: 50%;
+  }
+
+  .popupImg {
+    max-width: 90%;
+    max-height: 60%;
+    margin-top: 9%;
+  }
+
+  .redirectBtn {
+    width: 100%;
+    font-size: 15px;
+  }
+  .closeBtn {
+    /* border: 2px solid red; */
+    font-size: 15px;
+    
+  }
+}
+
+/* ✅ Mid Phones (376px–425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+  .popupBox {
+    width: 90%;
+    padding: 20px 15px;
+    max-height: 80vh;
+    top: 50%;
+  }
+
+  .popupImg {
+    max-width: 95%;
+    margin-top: 13%;
+  }
+
+  .redirectBtn {
+    width: 100%;
+    font-size: 15px;
+  }
+  .closeBtn {
+    /* border: 2px solid red; */
+    margin-bottom: 9%;
+    font-size: 18px;
+  }
+}
+
+/* ✅ Tablets Portrait (426px–768px) */
+@media (min-width: 426px) and (max-width: 768px) {
+  .popupBox {
+    margin-top: 5%;
+    width: 90%;
+    max-width: 350px;
+    padding: 25px 18px;
+    top: 50%;
+  
+    border-radius: 14px;
+
+  }
+
+  
+
+  .popupImg {
+    width: 100%;
+    /* max-width: 400%; */
+    max-height:70vh ;
+    margin-top: 7%;
+    border-radius: 20px;
+    /* border: 2px solid red; */
+  }
+
+  .redirectBtn {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .closeBtn {
+    
+    font-size: 18px;
+    /* border: 2px solid red; */
+    /* padding: 6px 8px; */
+  }
+}
+
+/* ✅ Tablets Landscape / Small Laptops (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .popupBox {
+    width: 65%;
+    max-width: 350px;
+    padding: 30px;
+    top: 52%;
+    border-radius: 14px;
+  }
+
+  .popupImg {
+    margin-top: 5%;
+    max-width: 600px;
+  }
+
+  .redirectBtn {
+    width: 85%;
+    font-size: 16px;
+  }
+
+  .closeBtn {
+    
+    font-size: 18px;
+  }
+}
+
+/* ✅ Desktops (1025px–1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .popupBox {
+    width: 50%;
+    max-width: 700px;
+    padding: 30px;
+    top: 55%;
+  }
+
+  .popupImg {
+    max-width: 600px;
+  }
+}
+
+/* ✅ Ultra-Wide Screens (≥ 1441px) */
+@media (min-width: 1441px) {
+  .popupBox {
+    width: 35%;
+    padding: 35px;
+    top: 55%;
+  }
+
+  .popupImg {
+    max-width: 500px;
+  }
+
+  .modalContent {
+    max-width: 700px;
+  }
 }
