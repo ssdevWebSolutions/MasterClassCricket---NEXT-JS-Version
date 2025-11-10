@@ -281,6 +281,7 @@ font-weight:bold;
 
 /* Button centered on image */
 .cta-btn {
+  text-decoration: none;
   position: absolute;
   top: 75%;
   left: 50%;

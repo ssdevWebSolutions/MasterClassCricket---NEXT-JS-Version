@@ -105,13 +105,22 @@ High-Performance Pathway
   </div>
 </section>
 
-            <section className="cta-section">
-                <h4 className="cta-heading">Ready To Get Started?</h4>
+<section className="cta-section">
+  <h4 className="cta-heading">Ready To Get Started?</h4>
 
-                <div className="cta-image">
-                    <button className="cta-btn">Contact Us</button>
-                </div>
-                </section>
+  <div className="cta-image">
+    <a
+      href="https://wa.me/447961692226?text=Hi%20Masterclass%20Team!%20I’d%20like%20to%20enquire%20about%20the%20Elite%20Cricket%20Academy."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="cta-btn"
+      text-decoration = "none"
+    >
+      Contact Us
+    </a>
+  </div>
+</section>
+
 
         </div>
 
