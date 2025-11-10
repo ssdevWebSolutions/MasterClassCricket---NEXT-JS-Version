@@ -170,12 +170,26 @@
 }
 
 .activeBtn {
-  background: #0a7a2b;
+  background: #d4af37;
   color: white;
 }
 
 .activeBtn:hover {
-  background: #0f9b3a;
+  background: #d4af37;
+}
+
+/* ✅ Book Now Button (below Read More, same base style) */
+.bookNowPopupBtn {
+  background-color: #d4af37; /* green to indicate action */
+  color: white;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.bookNowPopupBtn:hover {
+  background-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 /* ===========================
@@ -185,9 +199,9 @@
 /* ✅ Small Phones (≤ 375px) */
 @media (max-width: 375px) {
   .popupBox {
-    width: 94%;
+    width: 100%;
     padding: 18px 12px;
-    max-height: 95vh;
+    max-height: 80vh;
     top: 50%;
   }
 
@@ -213,13 +227,15 @@
   .popupBox {
     width: 90%;
     padding: 20px 15px;
-    max-height: 80vh;
+    max-height: 75vh;
     top: 50%;
   }
 
   .popupImg {
     max-width: 95%;
     margin-top: 13%;
+    max-height: 55vh;
+
   }
 
   .redirectBtn {
@@ -274,6 +290,7 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .popupBox {
     width: 65%;
+    margin-top: 3%;
     max-width: 350px;
     padding: 30px;
     top: 52%;
@@ -297,16 +314,18 @@
 }
 
 /* ✅ Desktops (1025px–1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) and (max-width: 1800px) {
   .popupBox {
-    width: 50%;
-    max-width: 700px;
+    width: 40%;
+    max-width: 600px;
+    max-height: 80vh;
     padding: 30px;
     top: 55%;
   }
 
   .popupImg {
     max-width: 600px;
+    max-height: 60vh;
   }
 }
 

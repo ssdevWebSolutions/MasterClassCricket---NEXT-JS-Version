@@ -89,6 +89,13 @@ const Popup = ({
           >
             {buttonText}
           </button>
+
+          <button
+  className={`${styles.redirectBtn} ${styles.bookNowPopupBtn}`} // new subtle style
+  onClick={() => window.open('https://masterclass-cricket.classforkids.io/', '_blank')}
+>
+  Book Now
+</button>
         </div>
       </div>
 
@@ -217,6 +224,11 @@ const Popup = ({
             >
               Book Now
             </button>
+
+ 
+
+           
+            
           </div>
         </div>
       )}
