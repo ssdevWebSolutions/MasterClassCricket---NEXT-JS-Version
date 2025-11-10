@@ -1,23 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
+/* ============================= */
+/* 🟡 Section Base Styling */
+/* ============================= */
+
 .testimonialsContainer {
-   
     background-color: #000;
     margin: 0 auto;
     padding: 1rem;
     overflow: hidden;
-    margin-bottom: 0%;
+    margin-bottom: 0;
 }
 
 .testimonialsHeader {
-    margin-top: 8%;
+    margin-top: 5%;
     text-align: center;
-
 }
 
 .testimonialsHeader h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: white;
     margin-bottom: 1rem;
@@ -25,203 +27,177 @@
 }
 
 .testimonialsHeader p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #aaa;
     max-width: 600px;
     margin: 0 auto;
 }
 
-.testimonialsRow {
+/* ============================= */
+/* 🎥 Video Testimonials Section */
+/* ============================= */
+
+.videoTestimonialsSection {
+    background-color: #000;
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.videoTestimonialsSection .testimonialsHeader h2 {
+    color: white;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.videoTestimonialsSection .testimonialsHeader p {
+    color: #aaa;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================= */
+/* 🧩 Continuous Scrolling Rows */
+/* ============================= */
+
+.videoRowsContainer {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-    overflow-x: hidden;
-    position: relative;
-    padding: 1rem 0;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+    overflow: hidden;
     width: 100%;
 }
 
-.testimonialsRowInner {
+.videoRow {
     display: flex;
     gap: 1.5rem;
-    min-width: 100%;
-    will-change: transform;
+    animation: scrollLeft 35s linear infinite;
+    width: max-content;
 }
 
-.testimonialCard {
+.videoRow:nth-child(even) {
+    animation: scrollRight 40s linear infinite;
+}
+
+/* ✅ Pause animation when hovered */
+.videoRow.paused {
+    animation-play-state: paused;
+}
+
+/* ============================= */
+/* 🎞️ Video Card Style */
+/* ============================= */
+
+.videoCard {
     background-color: rgb(255, 192, 7);
     border-radius: 10px;
-    padding: 1.5rem;
-    min-width: 320px;
-    max-width: 320px;
+    padding: 1rem;
+    width: 320px;
     flex: 0 0 auto;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: pan-y;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 192, 7, 0.15);
+    overflow: hidden;
     cursor: pointer;
 }
 
-.testimonialCard.active,
-.testimonialCard:hover {
+/* ✅ Smooth enlarge effect when hovered */
+.activeCard {
+    transform: scale(1.1);
     background-color: rgb(2, 2, 2);
-    color: white;
-    
+    box-shadow: 0 0 25px rgba(255, 192, 7, 0.5);
+    z-index: 10;
 }
 
-.testimonialCard.active p,
-.testimonialCard:hover p,
-.testimonialCard.active .authorName,
-.testimonialCard:hover .authorName {
-    color: white;
+.videoPlayer {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    pointer-events: none;
 }
 
-.testimonialAuthor {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+.videoInfo {
+    text-align: center;
+    padding: 0.8rem 0 0.5rem;
 }
 
-.authorAvatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 1rem;
-    background-color: rgb(170, 39, 43);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #000;
-}
-
-.authorName {
+.videoInfo h3 {
     font-size: 1.1rem;
     font-weight: 600;
     color: #000;
 }
 
-
-.testimonialText {
-    color: #000;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    height: 110px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    transition: color 0.3s ease;
+.activeCard .videoInfo h3 {
+    color: #fff;
 }
 
-.scrollLeft {
-    animation: scrollLeft 25s linear infinite;
-}
-
-.scrollRight {
-    animation: scrollRight 25s linear infinite;
-}
-
-@keyframes scrollLeft {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
-@keyframes scrollRight {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
-}
-
-/* Navigation buttons */
-.navButtons {
-    display: none; /* Hidden by default, shown on mobile */
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 0.5rem;
-}
-
-.navBtn {
-    background-color: rgb(255, 192, 7);
-    color: black;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-.navBtn:hover {
-    background-color: white;
-}
-
-/* Mobile container for all testimonials */
-.mobileTestimonials {
-    display: none;
-}
+/* ============================= */
+/* 📱 Responsive */
+/* ============================= */
 
 @media (max-width: 768px) {
-    .testimonialCard {
-        min-width: 250px;
-        max-width: 250px;
-        padding: 1rem;
-    }
-    
     .testimonialsHeader h2 {
         font-size: 2rem;
     }
 
-    .testimonialsHeader p {
+    .videoCard {
+        width: 260px;
+    }
+
+    .videoPlayer {
+        height: 150px;
+    }
+
+    .videoInfo h3 {
         font-size: 1rem;
-    }
-    
-    /* Hide desktop rows on mobile */
-    .desktopTestimonials {
-        display: none;
-    }
-    
-    /* Show mobile testimonials */
-    .mobileTestimonials {
-        display: block;
-    }
-    
-    /* Show navigation buttons on mobile */
-    .navButtons {
-        display: flex;
-        position: relative;
-        z-index: 5;
-    }
-    
-    /* Style mobile carousel */
-    .mobileCarousel {
-        position: relative;
-        overflow: hidden;
-        padding: 1rem 0;
-    }
-    
-    .mobileCarouselInner {
-        display: flex;
-        transition: transform 0.5s ease;
-        gap: 1.5rem;
     }
 }
 
-@media (max-width: 480px) {
-    .testimonialCard {
-        min-width: 220px;
-        max-width: 220px;
-        padding: 0.8rem;
+/* ============================= */
+/* 🌀 Infinite Scroll Animation */
+/* ============================= */
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
     }
 
-    .testimonialText {
-        font-size: 0.85rem;
-        height: 100px;
+    100% {
+        transform: translateX(-50%);
     }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ============================= */
+/* 🚫 Hide Scrollbars */
+/* ============================= */
+
+.hideScrollbars :global(html),
+.hideScrollbars :global(body) {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+.hideScrollbars :global(body::-webkit-scrollbar) {
+    display: none;
+}
+
+.hideScrollbars :global(body) {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
