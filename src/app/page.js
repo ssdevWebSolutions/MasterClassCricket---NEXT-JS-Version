@@ -90,7 +90,7 @@ const Main = () => {
     {/* <Popup /> */}
     <LoadingScreen />
     <Navbar />
-    <AdvertisementBar />
+    {/* <AdvertisementBar /> */}
     <HeroSection />
     <VideoSection />
     <CricketServicesSection />
