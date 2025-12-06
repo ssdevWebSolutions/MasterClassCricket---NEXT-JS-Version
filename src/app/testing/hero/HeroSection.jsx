@@ -107,7 +107,7 @@ export default function HeroSection() {
   return (
     <>
       {/* animated background */}
-      <div className="animated-bg" aria-hidden="true">
+      <div className="animated-bg" aria-hidden="true" >
         <div className="cricket-ball-bg ball-1" />
         <div className="cricket-ball-bg ball-2" />
         <div className="cricket-ball-bg ball-3" />

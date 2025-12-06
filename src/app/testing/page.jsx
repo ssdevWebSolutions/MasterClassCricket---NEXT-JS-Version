@@ -17,7 +17,10 @@ const Testing= () => {
     <Navbar />
     {/* <AdvertisementBar /> */}
     {/* <HeroSection /> */}
+    <div >
     <HeroSection />
+    </div>
+  
       {/* Services -> Upcoming Events -> etc */}
     {/* <VideoSection /> */}
     <CricketServicesSection />
