@@ -8,6 +8,9 @@ import PartnersSection from "../homepage/PartnersSection";
 import SocialMediaSection from "../homepage/SocialMediaSection";
 import VideoSection from "../homepage/VideoSection";
 import HeroSection from "./hero/HeroSection";
+import ServiceSection from "./services/Services";
+import Services from "./services/Services";
+import UpcomingEventsCarousel from "./UpcomingEventsCarousel/UpcomingEventsCarousel";
 
 const Testing= () => {
 
@@ -15,18 +18,12 @@ const Testing= () => {
     {/* <Popup /> */}
     {/* <LoadingScreen /> */}
     <Navbar />
-    {/* <AdvertisementBar /> */}
     {/* <HeroSection /> */}
-    <HeroSection />
-      {/* Services -> Upcoming Events -> etc */}
-    {/* <VideoSection /> */}
-    <CricketServicesSection />
-    <SocialMediaSection />
-    {/* <CoachesSection /> */}
-    <PartnersSection />
-    <SocialStatsSection />
+    {/* <ServiceSection /> */}
+    <UpcomingEventsCarousel />
+    {/* <SocialMediaSection /> */}
     <ContactSection />
-    <Footer />
+    {/* <Footer /> */}
     </>
 }
 
