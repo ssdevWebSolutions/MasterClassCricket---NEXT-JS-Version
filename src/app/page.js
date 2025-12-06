@@ -12,7 +12,6 @@ import VideoSection from "./homepage/VideoSection";
 import { Inter } from 'next/font/google'
 import LoadingScreen from "./components/LoadingScreen";
 import './globals.css'
-import Popup from "./components/Popup";
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -1,0 +1,130 @@
+:root{
+  --bg: #070707;
+  --gold: #D4AF37;
+  --muted: #bfbfbf;
+  --card-radius: 12px;
+  --max-w: 960px;
+}
+
+/* ---------------------------
+   Cricket / background animations
+   --------------------------- */
+@keyframes floatBall { 0%,100%{transform:translate(0,0) rotate(0deg);opacity:.15}25%{transform:translate(30px,-40px) rotate(90deg);opacity:.25}50%{transform:translate(-20px,-80px) rotate(180deg);opacity:.15}75%{transform:translate(-50px,-40px) rotate(270deg);opacity:.25} }
+@keyframes floatBall2 { 0%,100%{transform:translate(0,0) rotate(0deg);opacity:.12}33%{transform:translate(-40px,-50px) rotate(120deg);opacity:.22}66%{transform:translate(40px,-30px) rotate(240deg);opacity:.12} }
+@keyframes stumpsGlow { 0%,100%{opacity:.08;transform:translateY(0)}50%{opacity:.18;transform:translateY(-10px)} }
+@keyframes gradientShift { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
+
+/* Animated background */
+.animated-bg{ position:fixed; inset:0; background:linear-gradient(135deg,#070707 0%,#0a0a0a 25%,#0d0805 50%,#0a0a0a 75%,#070707 100%); background-size:400% 400%; animation:gradientShift 15s ease infinite; z-index:0 }
+.cricket-ball-bg{ position:absolute; width:120px; height:120px; border-radius:50%; background:radial-gradient(circle at 30% 30%, rgba(212,175,55,0.15), transparent 70%); border:2px solid rgba(212,175,55,0.08); pointer-events:none }
+.ball-1{ top:10%; left:15%; animation:floatBall 20s ease-in-out infinite }
+.ball-2{ top:60%; right:10%; animation:floatBall2 25s ease-in-out infinite 5s }
+.ball-3{ bottom:20%; left:8%; width:80px; height:80px; animation:floatBall 18s ease-in-out infinite 10s }
+.stumps-decoration{ position:absolute; top:30%; right:20%; width:60px; height:100px; opacity:.1; animation:stumpsGlow 4s ease-in-out infinite }
+
+/* Eclipse */
+@keyframes eclipse { 0%{transform:translateX(110%)}100%{transform:translateX(-110%)} }
+.eclipse{ background:white; transform:translateX(50%); filter:blur(2px); animation:eclipse 3s linear infinite }
+.eclipse.glow{ background-image: radial-gradient(circle at 50% 50%, transparent, black), linear-gradient(white,white) }
+
+/* Pulse */
+@keyframes pulse { 0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.3);opacity:.7} }
+@keyframes pulseRing { 0%{transform:scale(1);opacity:.6}100%{transform:scale(2);opacity:0} }
+
+/* CTA text animation */
+@keyframes slideIn { 0%{transform:translateX(-20px);opacity:0}100%{transform:translateX(0);opacity:1} }
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Inter',Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:var(--bg);color:#fff;-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;position:relative}
+a{color:inherit;text-decoration:none}
+.page{ display:flex; align-items:flex-start; justify-content:center; min-height:100vh; padding:28px 18px; position:relative; z-index:1 }
+
+/* hero/card */
+.hero{ width:100%; max-width:var(--max-w); display:grid; grid-template-columns:1fr; gap:16px; align-items:start }
+.hero-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.025)); border:1px solid rgba(255,255,255,0.04); border-radius:16px; padding:18px; box-shadow:0 18px 50px rgba(0,0,0,0.7); overflow:hidden; backdrop-filter: blur(10px); transition: transform .3s ease }
+.hero-card:hover{ transform:translateY(-2px) }
+
+/* badge */
+.badge-row{ display:flex; gap:12px; align-items:center; margin-bottom:10px }
+.badge-icon{ width:46px; height:46px; border-radius:50%; display:grid; place-items:center; background:radial-gradient(circle at 25% 20%, rgba(255,255,255,0.03), transparent 35%), rgba(255,255,255,0.01); border:1px solid rgba(212,175,55,0.06); transition: transform .3s ease }
+.badge-icon:hover{ transform:rotate(360deg) }
+.badge-title{ font-size:12px; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:.8px }
+.badge-sub{ font-size:12px; color:var(--muted) }
+
+.hero-title{ font-size:24px; line-height:1.04; margin:0 0 10px 0; font-weight:800 }
+.hero-title .gold{ color:var(--gold) }
+.hero-desc{ color:#d7d7d7; margin:0 0 14px 0; font-size:15px; line-height:1.6 }
+
+/* buttons */
+.super-button{ position:relative; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:14px 28px; background:linear-gradient(145deg,#0f0f0f,#1c1c1c); border:2px solid rgba(255,255,255,0.2); border-radius:100px; color:#fff; font-size:16px; font-weight:600; letter-spacing:.5px; cursor:pointer; overflow:hidden; transition:all .4s ease-in-out; box-shadow:0 0 20px rgba(0,255,255,0.1); backdrop-filter: blur(8px); z-index:1 }
+.super-button::before{ content:""; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:conic-gradient(from 0deg,#00ffff,#ff00ff,#00ffff); animation:rotate 4s linear infinite; z-index:-2 }
+.super-button::after{ content:""; position:absolute; inset:2px; background:#0a0a0a; border-radius:inherit; z-index:-1 }
+.super-button:hover{ transform:scale(1.05); box-shadow:0 0 40px rgba(0,255,255,0.2) }
+.super-button:hover .arrow{ transform:translateX(6px) }
+.arrow{ width:22px; height:22px; transition:transform .3s ease-in-out; color:#00ffff; display:inline-block }
+@keyframes rotate{ 0%{transform:rotate(0deg)}100%{transform:rotate(360deg)} }
+
+.btn-wa{ width:48px; height:48px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(180deg, rgba(255,255,255,0.018), rgba(0,0,0,0.06)); border:1px solid rgba(255,255,255,0.04); cursor:pointer; transition: transform .12s ease, box-shadow .12s ease }
+.btn-wa:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(37,211,102,0.3) }
+.btn-wa:focus{ outline:3px solid rgba(34,139,34,0.12); outline-offset:4px }
+
+/* cta/wrapper */
+.cta-wrap{ display:flex; align-items:center; gap:10px; margin-bottom:12px; flex-wrap:nowrap }
+.cta-left{ display:flex; align-items:center; gap:8px }
+
+/* badges */
+.badges{ display:flex; gap:8px; align-items:center; margin-top:6px; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:2px }
+.badge-pill{ display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:999px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03); min-width:90px; transition: all .3s ease }
+.badge-pill:hover{ background:rgba(212,175,55,0.05); border-color:rgba(212,175,55,0.1); transform:translateY(-2px) }
+.badge-pill strong{ color:#fff; font-size:14px; display:block; line-height:1 }
+.badge-pill span{ font-size:12px; color:var(--muted); display:block; line-height:1 }
+
+/* latest event and visual */
+.latest-heading{ font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; display:flex; align-items:center; gap:8px }
+.latest-heading::before{ content:''; width:20px; height:2px; background:linear-gradient(90deg, transparent, var(--gold)) }
+
+.visual{ margin-top:12px; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.03); background:linear-gradient(180deg, rgba(212,175,55,0.03), rgba(0,0,0,0.28)); box-shadow:0 20px 60px rgba(0,0,0,0.6); position:relative; transition: transform .3s ease, box-shadow .3s ease }
+.visual:hover{ transform:translateY(-4px); box-shadow:0 25px 70px rgba(0,0,0,0.8) }
+.visual .image{ height:220px; background-image:url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c6f6a6ec7b4e8d6b8d2c3a0a6d0f1b3'); background-size:cover; background-position:center; display:flex; flex-direction:column; justify-content:flex-end; padding:16px; color:#fff; position:relative }
+
+.image .new-pill-wrap{ position:absolute; right:12px; top:12px; z-index:40; pointer-events:none; display:inline-flex; align-items:center; justify-content:center }
+.image .new-pill-bg{ position:absolute; inset:0; border-radius:999px; overflow:hidden; filter:blur(6px); opacity:.18; pointer-events:none }
+.image .new-pill-bg .eclipse.glow{ position:absolute; inset:0; border-radius:999px; opacity:.28 }
+.image .new-pill{ position:relative; display:inline-flex; align-items:center; justify-content:center; border-radius:999px; font-size:13px; color:#fff; font-weight:500; background:rgba(0,0,0,0.95); padding:6px 12px; pointer-events:none; backdrop-filter:blur(2px); border:1px solid rgba(255,255,255,0.04) }
+.image .new-pill .inner{ color:var(--gold); font-weight:700; letter-spacing:.2px }
+
+.image .left-badge{ position:absolute; left:12px; bottom:10px; background:rgba(0,0,0,0.65); border:1px solid rgba(255,255,255,0.04); color:#fff; padding:6px 8px; border-radius:8px; min-width:130px; font-weight:700; font-size:13px; transition: transform .28s cubic-bezier(.2,.9,.2,.9), box-shadow .28s ease; box-shadow:0 8px 20px rgba(0,0,0,0.6); display:flex; align-items:center; gap:8px; backdrop-filter:blur(4px); z-index:20 }
+.image .left-badge .title{ color:var(--gold); font-weight:800; font-size:13px }
+
+.visual .meta{ padding:12px 14px; background:rgba(0,0,0,0.55); display:flex; justify-content:flex-start; align-items:center; font-size:13px; color:#ddd; gap:12px; backdrop-filter:blur(5px) }
+.visual .meta .left{ flex:1; display:flex; align-items:center; gap:8px; color:#ddd }
+.visual .meta .left .dot-container{ position:relative; width:10px; height:10px; display:flex; align-items:center; justify-content:center }
+.visual .meta .left .dot{ width:10px; height:10px; background:linear-gradient(180deg,#ff8a00,#ff5e00); border-radius:50%; box-shadow:0 6px 18px rgba(255,120,0,0.22); display:inline-block; animation:pulse 2s ease-in-out infinite }
+.visual .meta .left .dot-ring{ position:absolute; width:10px; height:10px; border:2px solid #ff8a00; border-radius:50%; animation:pulseRing 2s ease-out infinite }
+.visual .meta .cta-text{ font-weight:600; color:#fff; animation:slideIn .6s ease-out }
+
+/* modal */
+.modal-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.75); display:none; align-items:center; justify-content:center; padding:20px; z-index:999; backdrop-filter:blur(8px) }
+.modal{ width:100%; max-width:420px; background:#0b0b0b; border-radius:12px; padding:18px; border:1px solid rgba(255,255,255,0.04); box-shadow:0 30px 80px rgba(0,0,0,0.8) }
+.modal h3{ margin:0 0 8px 0; font-size:18px }
+.form-row{ display:flex; flex-direction:column; gap:8px; margin-top:10px }
+.input, .select{ width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:#fff; font-size:14px; transition:border-color .3s ease }
+.input:focus, .select:focus{ outline:none; border-color:rgba(212,175,55,0.3) }
+.form-actions{ display:flex; gap:10px; margin-top:12px }
+.btn-submit{ background:var(--gold); border:none; padding:10px 12px; border-radius:8px; font-weight:700; color:#071010; cursor:pointer; flex:1; transition:all .3s ease }
+.btn-submit:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(212,175,55,0.3) }
+.btn-cancel{ background:transparent; border:1px solid rgba(255,255,255,0.06); padding:10px 12px; border-radius:8px; color:#ddd; cursor:pointer; transition:all .3s ease }
+.btn-cancel:hover{ background:rgba(255,255,255,0.02) }
+
+/* responsive */
+@media (max-width:520px){
+  .hero-title{ font-size:20px }
+  .super-button{ padding:12px 20px; font-size:15px }
+  .btn-wa{ width:44px; height:44px }
+  .badge-pill{ min-width:86px; padding:7px 9px }
+  .image .left-badge{ left:10px; bottom:8px; min-width:110px; padding:5px 7px; font-size:11px }
+  .image .new-pill-wrap{ right:10px; top:10px }
+}
+@media (min-width:880px){ .hero{ grid-template-columns:1fr 360px; gap:20px } }
+@media (prefers-reduced-motion:reduce){ .super-button::before,.eclipse,.badge-icon,.cricket-ball-bg,.stumps-decoration,.dot,.dot-ring,.cta-text{ animation:none !important } .animated-bg{ animation:none } }
