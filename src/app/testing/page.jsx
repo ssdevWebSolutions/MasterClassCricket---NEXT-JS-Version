@@ -8,6 +8,9 @@ import PartnersSection from "../homepage/PartnersSection";
 import SocialMediaSection from "../homepage/SocialMediaSection";
 import VideoSection from "../homepage/VideoSection";
 import HeroSection from "./hero/HeroSection";
+import ServiceSection from "./services/Services";
+import Services from "./services/Services";
+import UpcomingEventsCarousel from "./UpcomingEventsCarousel/UpcomingEventsCarousel";
 
 const Testing= () => {
 
@@ -15,8 +18,10 @@ const Testing= () => {
     {/* <Popup /> */}
     {/* <LoadingScreen /> */}
     <Navbar />
-    {/* <AdvertisementBar /> */}
     {/* <HeroSection /> */}
+    {/* <ServiceSection /> */}
+    <UpcomingEventsCarousel />
+    {/* <SocialMediaSection /> */}
     <div >
     <HeroSection />
     </div>
@@ -29,7 +34,7 @@ const Testing= () => {
     <PartnersSection />
     <SocialStatsSection />
     <ContactSection />
-    <Footer />
+    {/* <Footer /> */}
     </>
 }
 
