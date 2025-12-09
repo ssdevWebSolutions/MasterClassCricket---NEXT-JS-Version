@@ -1,5 +1,6 @@
 import ContactSection from "../components/ContactSection";
 import CricketServicesSection from "../components/CricketServicesSection";
+
 import Footer from "../components/Footer";
 import LoadingScreen from "../components/LoadingScreen";
 import Navbar from "../components/Navbar";
@@ -22,14 +23,15 @@ const Testing= () => {
     {/* <ServiceSection /> */}
     <UpcomingEventsCarousel />
     {/* <SocialMediaSection /> */}
-    <div >
-    <HeroSection />
-    </div>
+   
+    {/* <HeroSection /> */}
+  
   
       {/* Services -> Upcoming Events -> etc */}
     {/* <VideoSection /> */}
-    <CricketServicesSection />
-    <SocialMediaSection />
+  <ServiceSection />
+    {/* <CricketServicesSection /> */}
+    {/* <SocialMediaSection /> */}
     {/* <CoachesSection /> */}
     <PartnersSection />
     <SocialStatsSection />
