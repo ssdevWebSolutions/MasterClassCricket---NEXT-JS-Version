@@ -60,7 +60,7 @@
 .headerHero-logo-text {
   font-size: 1rem;
   font-weight: 700;
-  color: #d4af37;
+  color: #facc15;
   letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -98,13 +98,13 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background: #d4af37;
+  background: #facc15;
   transition: width 0.3s ease;
 }
 
 .headerHero-nav-link:hover,
 .headerHero-nav-link.active {
-  color: #d4af37;
+  color: #facc15;
 }
 
 .headerHero-nav-link:hover::after,
@@ -115,7 +115,7 @@
 /* Book Now Button */
 .headerHero-book-now-btn {
   display: inline-block;
-  background: #d4af37;
+  background: #facc15;
   color: #121212;
   padding: 10px 25px;
   border-radius: 25px;
@@ -232,7 +232,7 @@
     font-size: 1rem;
     padding: 12px 28px;
     border-radius: 25px;
-    background: #d4af37;
+    background: #facc15;
     color: black;
   }
 
@@ -322,7 +322,7 @@
 .dropdown-item {
   display: block;
   padding: 10px 18px;
-  color: #d4af37;
+  color: #facc15;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -340,7 +340,7 @@
   content: "▼";
   font-size: 0.65rem;
   margin-left: 5px;
-  color: #d4af37;
+  color: #facc15;
   transition: transform 0.3s ease;
 }
 

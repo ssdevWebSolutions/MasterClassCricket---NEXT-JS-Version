@@ -48,7 +48,7 @@
 .partnershipSubtitle {
     font-size: 1rem;
     font-weight: 500;
-    color: #D4AF37;
+    color: #facc15;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 15px;
@@ -64,7 +64,7 @@
     content: "";
     position: absolute;
     height: 1px;
-    background: #D4AF37;
+    background: #facc15;
     top: 50%;
     width: 30px;
 }
@@ -102,7 +102,7 @@
 }
 
 .partnershipTitleHighlight {
-    color: #D4AF37;
+    color: #facc15;
     position: relative;
     display: inline-block;
 }
@@ -193,7 +193,7 @@
     text-align: center;
     width: 200px;
     height: 150px;
-    background: #D4AF37;
+    background: #facc15;
     border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: 10px;
     justify-content: center;
@@ -266,7 +266,7 @@
     right: 10px;
     font-size: 0.7rem;
     color: #000;
-    background: #D4AF37;
+    background: #facc15;
     padding: 3px 8px;
     border-radius: 3px;
     font-weight: 600;
@@ -312,8 +312,8 @@
 .viewAllPartners {
     display: inline-block;
     background: transparent;
-    color: #D4AF37;
-    border: 1px solid #D4AF37;
+    color: #facc15;
+    border: 1px solid #facc15;
     padding: 12px 25px;
     font-size: 0.9rem;
     font-weight: 500;
@@ -337,7 +337,7 @@
 }
 
 .viewAllPartners:hover {
-    background: #D4AF37;
+    background: #facc15;
     color: #000;
 }
 

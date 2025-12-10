@@ -11,7 +11,7 @@
   }
   
   .wrapper h2 span {
-    color: #ffcb05;
+    color: #facc15;
   }
   
   .grid {
@@ -25,8 +25,8 @@
   .followBtn {
     margin-top: 30px;
     background: transparent;
-    border: 1px solid #ffcb05;
-    color: #ffcb05;
+    border: 1px solid #facc15;
+    color: #facc15;
     padding: 12px 24px;
     font-size: 14px;
     border-radius: 24px;
@@ -38,7 +38,7 @@
   }
   
   .followBtn:hover {
-    background: #ffcb05;
+    background: #facc15;
     color: #000;
   }
   

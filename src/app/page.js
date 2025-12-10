@@ -12,6 +12,7 @@ import VideoSection from "./homepage/VideoSection";
 import { Inter } from 'next/font/google'
 import LoadingScreen from "./components/LoadingScreen";
 import './globals.css'
+import LiveEvents from "./components/LiveEvents";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -90,6 +91,7 @@ const Main = () => {
     <LoadingScreen />
     <Navbar />
     {/* <AdvertisementBar /> */}
+    <LiveEvents />
     <HeroSection />
     <VideoSection />
     <CricketServicesSection />

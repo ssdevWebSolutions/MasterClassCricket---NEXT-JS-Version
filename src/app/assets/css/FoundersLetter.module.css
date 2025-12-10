@@ -142,7 +142,7 @@
   }
   
   .founderDetail i {
-    color: #D4AF37;
+    color: #facc15;
   }
   
   .founderImageWrap {
@@ -160,7 +160,7 @@
   .founderImageWrap:hover {
     transform: rotateY(0deg) translateZ(50px);
     box-shadow: 0 40px 70px rgba(234, 179, 8, 0.2);
-    border-color: #eab308;
+    border-color: #facc15;
   }
   
   .founderImageContainer {
@@ -221,7 +221,7 @@
   .lettercoach {
     margin-top: 5%;
     text-align: center;
-    color: #eab308;
+    color: #facc15;
     font-family: 'Playfair Display', serif;
     margin-right: 15%;
     width: 100%;
@@ -262,7 +262,7 @@
   .founderDetail i {
     font-size: 20px;
     margin-right: 8px;
-    color: #eab308;
+    color: #facc15;
   }
   
   /* Text Styles */
@@ -320,7 +320,7 @@
   }
   
   .letterContentScroll::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #eab308, #d97706);
+    background: linear-gradient(to bottom, #facc15, #d97706);
   }
   
   /* Scroll indicator */
@@ -331,7 +331,7 @@
     transform: translateX(-50%);
     width: 30px;
     height: 50px;
-    border: 2px solid #eab308;
+    border: 2px solid #facc15;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -344,7 +344,7 @@
     content: '';
     width: 6px;
     height: 10px;
-    background: #eab308;
+    background: #facc15;
     border-radius: 3px;
     position: absolute;
     top: 8px;
@@ -375,7 +375,7 @@
   }
   
   .letterText em {
-    color: #eab308;
+    color: #facc15;
     font-style: italic;
   }
   
@@ -383,7 +383,7 @@
   .cricketQuote {
     position: relative;
     background: rgba(26, 26, 26, 0.5);
-    border-left: 4px solid #eab308;
+    border-left: 4px solid #facc15;
     padding: 20px 25px;
     margin: 30px 0;
     font-style: italic;
@@ -398,7 +398,7 @@
     top: -20px;
     left: 10px;
     font-size: 60px;
-    color: #eab308;
+    color: #facc15;
     font-family: 'Playfair Display', serif;
     opacity: 0.5;
   }
@@ -414,14 +414,14 @@
     padding: 20px;
     background: rgba(15, 15, 15, 0.6);
     border-radius: 10px;
-    border-left: 3px solid #eab308;
+    border-left: 3px solid #facc15;
   }
   
   .missionSection strong,
   .visionSection strong {
     display: block;
     font-size: 1.2rem;
-    color: #eab308;
+    color: #facc15;
     margin-bottom: 10px;
     font-family: 'Playfair Display', serif;
   }

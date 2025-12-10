@@ -111,7 +111,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(to right, transparent, #eab308, transparent);
+    background: linear-gradient(to right, transparent, #facc15, transparent);
     animation: expand 3s ease-in-out infinite;
   }
   
@@ -125,7 +125,7 @@
   }
   
   .contactUsHighlight {
-    color: #eab308;
+    color: #facc15;
     font-weight: 600;
   }
   
@@ -156,7 +156,7 @@
     margin: 0 0 25px;
     position: relative;
     padding-bottom: 15px;
-    color: #eab308;
+    color: #facc15;
   }
   
   .contactUsInfoTitle::after {
@@ -166,7 +166,7 @@
     left: 0;
     width: 50px;
     height: 3px;
-    background-color: #eab308;
+    background-color: #facc15;
   }
   
   .contactUsInfoText {
@@ -185,7 +185,7 @@
     align-items: flex-start;
     margin-bottom: 20px;
     padding-left: 10px;
-    border-left: 2px solid #eab308;
+    border-left: 2px solid #facc15;
     transition: transform 0.3s ease;
   }
   
@@ -200,7 +200,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #eab308;
+    color: #facc15;
   }
   
   .contactUsInfoIcon svg {
@@ -232,7 +232,7 @@
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
-    color: #eab308;
+    color: #facc15;
   }
   
   .contactUsSocialList {
@@ -248,14 +248,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #eab308;
+    color: #facc15;
     transition: all 0.3s ease;
     transform-style: preserve-3d;
     text-decoration: none;
   }
   
   .contactUsSocialItem:hover {
-    background-color: #eab308;
+    background-color: #facc15;
     color: #000;
     transform: translateZ(20px) scale(1.2);
   }
@@ -287,7 +287,7 @@
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 25px;
-    color: #eab308;
+    color: #facc15;
     text-align: center;
     transform: translateZ(20px);
   }
@@ -318,7 +318,7 @@
   
   .contactUsInput:focus,
   .contactUsTextarea:focus {
-    border-color: #eab308;
+    border-color: #facc15;
     box-shadow: 0 0 0 2px rgba(234, 179, 8, 0.3);
     outline: none;
   }
@@ -330,7 +330,7 @@
   }
   
   .contactUsSubmit {
-    background-color: #eab308;
+    background-color: #facc15;
     color: #000;
     border: none;
     padding: 14px 28px;

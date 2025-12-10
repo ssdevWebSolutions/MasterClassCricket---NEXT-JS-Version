@@ -17,7 +17,7 @@
 
 .igHighlight {
   font-family: 'Playfair Display', serif;
-  color: #eab308;
+  color: #facc15;
   /* Yellow-500 */
 }
 
@@ -239,7 +239,7 @@
   right: 16px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #eab308;
+  color: #facc15;
   /* Yellow-500 */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -271,7 +271,7 @@
 }
 
 .igActionBtn:hover {
-  color: #eab308;
+  color: #facc15;
   /* Yellow-500 */
 }
 
@@ -318,8 +318,8 @@
   align-items: center;
   padding: 12px 24px;
   background: none;
-  border: 1px solid #eab308; /* Yellow-500 */
-  color: #eab308;
+  border: 1px solid #facc15; /* Yellow-500 */
+  color: #facc15;
   border-radius: 8px;
   font-weight: 500;
   font-size: 0.875rem;

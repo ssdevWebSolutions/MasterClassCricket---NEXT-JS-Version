@@ -19,24 +19,21 @@ const Testing= () => {
     {/* <Popup /> */}
     {/* <LoadingScreen /> */}
     <Navbar />
-    {/* <HeroSection /> */}
-    {/* <ServiceSection /> */}
+    <HeroSection />
+    <ServiceSection />
     <UpcomingEventsCarousel />
     {/* <SocialMediaSection /> */}
-   
     {/* <HeroSection /> */}
-  
-  
       {/* Services -> Upcoming Events -> etc */}
     {/* <VideoSection /> */}
-  <ServiceSection />
+  {/* <ServiceSection /> */}
     {/* <CricketServicesSection /> */}
     {/* <SocialMediaSection /> */}
     {/* <CoachesSection /> */}
     <PartnersSection />
     <SocialStatsSection />
     <ContactSection />
-    {/* <Footer /> */}
+    <Footer />
     </>
 }
 

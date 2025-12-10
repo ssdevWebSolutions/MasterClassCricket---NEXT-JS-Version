@@ -18,7 +18,7 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    background: linear-gradient(90deg, transparent, #facc15, transparent);
 }
 
 .coachesContainer {
@@ -39,7 +39,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 800;
-    color: #D4AF37;
+    color: #facc15;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -51,7 +51,7 @@
 .coachesHeadingUnderline {
     width: 120px;
     height: 4px;
-    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    background: linear-gradient(90deg, transparent, #facc15, transparent);
     margin: 0 auto 15px;
 }
 
@@ -177,7 +177,7 @@
 }
 
 .coachName {
-    color: #D4AF37;
+    color: #facc15;
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 5px;
@@ -199,7 +199,7 @@
 .coachSeparator {
     width: 50px;
     height: 3px;
-    background: #D4AF37;
+    background: #facc15;
     margin: 15px auto;
 }
 
@@ -227,7 +227,7 @@
 
 .achievementBadge {
     background: rgba(212, 175, 55, 0.15);
-    color: #D4AF37;
+    color: #facc15;
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -247,7 +247,7 @@
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.05);
-    color: #D4AF37;
+    color: #facc15;
     border-radius: 50%;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -255,7 +255,7 @@
 }
 
 .socialLink:hover {
-    background: #D4AF37;
+    background: #facc15;
     color: #000;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
@@ -267,8 +267,8 @@
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
-    border: 2px solid #D4AF37;
-    color: #D4AF37;
+    border: 2px solid #facc15;
+    color: #facc15;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -291,7 +291,7 @@
 }
 
 .coachesNavBtn:hover {
-    background: #D4AF37;
+    background: #facc15;
     color: #000;
     transform: translateY(-50%) scale(1.1);
 }
@@ -314,7 +314,7 @@
 }
 
 .indicatorDot.active {
-    background: #D4AF37;
+    background: #facc15;
     transform: scale(1.2);
 }
 

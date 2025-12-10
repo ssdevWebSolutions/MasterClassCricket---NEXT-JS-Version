@@ -1,0 +1,222 @@
+.event-page {
+    background: #050505;
+    color: #f9fafb;
+    min-height: 100vh;
+  }
+  
+  /* HERO */
+  .event-hero {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+  }
+  
+  .event-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.35);
+    transform: scale(1.05);
+  }
+  
+  .event-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #050505);
+  }
+  
+  .event-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .event-hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e5e7eb;
+  }
+  
+  .event-back {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  
+  .event-back:hover {
+    text-decoration: underline;
+  }
+  
+  .event-brand {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    font-size: 1rem;
+  }
+  
+  .event-brand-dot {
+    color: #facc15;
+  }
+  
+  /* HERO MAIN */
+  .event-hero-main {
+    margin-top: 2rem;
+  }
+  
+  .event-hero-badge {
+    display: inline-block;
+    background: #facc15;
+    color: #000;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.75rem;
+  }
+  
+  .event-hero-title {
+    font-size: 2.4rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .event-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    font-size: 0.9rem;
+    color: #e5e7eb;
+  }
+  
+  .event-hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  /* MAIN CONTENT */
+  .event-main {
+    padding: 3rem 0 4rem;
+    background: #050505;
+  }
+  
+  .event-main-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    gap: 3rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .event-main-inner {
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    }
+  }
+  
+  /* LEFT SIDE TEXT */
+  .event-section {
+    margin-bottom: 2rem;
+  }
+  
+  .event-section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 0.9rem;
+  }
+  
+  .event-section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    width: 3px;
+    height: 1rem;
+    background: #facc15;
+  }
+  
+  .event-section-text {
+    color: #d1d5db;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 40rem;
+  }
+  
+  /* TICKET CARD */
+  .event-ticket-card {
+    background: #111827;
+    border-radius: 1.25rem;
+    padding: 2rem 1.75rem;
+    border: 1px solid #1f2937;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    align-self: flex-start;
+  }
+  
+  .event-ticket-price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+  }
+  
+  .event-ticket-type {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-bottom: 1.5rem;
+  }
+  
+  .event-ticket-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #e5e7eb;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #1f2937;
+  }
+  
+  .event-ticket-detail span:first-child {
+    color: #9ca3af;
+  }
+  
+  .event-ticket-venue {
+    font-weight: 600;
+  }
+  
+  .event-ticket-btn {
+    margin-top: 1.6rem;
+    width: 100%;
+    border-radius: 0.75rem;
+    border: none;
+    background: #facc15;
+    color: #000;
+    font-weight: 700;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .event-ticket-btn:hover {
+    background: #e0b41b;
+  }
+  
+  .event-ticket-note {
+    margin-top: 0.8rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-align: center;
+  }
+  

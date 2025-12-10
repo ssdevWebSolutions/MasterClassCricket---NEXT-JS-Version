@@ -30,7 +30,7 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    background: radial-gradient(circle at 30% 30%, #d4af37, #aa8c2c);
+    background: radial-gradient(circle at 30% 30%, #facc15, #aa8c2c);
     border-radius: 50%;
     filter: blur(5px);
 }
@@ -80,7 +80,7 @@
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 15px;
-    background: linear-gradient(to right, #d4af37, #f5d76e);
+    background: linear-gradient(to right, #facc15, #f5d76e);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -95,7 +95,7 @@
     display: block;
     width: 80px;
     height: 3px;
-    background: linear-gradient(to right, #d4af37, #f5d76e);
+    background: linear-gradient(to right, #facc15, #f5d76e);
     margin: 15px auto 0;
     border-radius: 3px;
 }
@@ -118,7 +118,7 @@
 /* Service card with unique design */
 .serviceCard {
     position: relative;
-    background-color: #d4af37;
+    background-color: #facc15;
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -159,14 +159,14 @@
     left: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, #d4af37, transparent);
+    background: linear-gradient(90deg, #facc15, transparent);
 }
 
 .cardTitle {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #d4af37;
+    color: #facc15;
 }
 
 .cardSubtitle {
@@ -212,7 +212,7 @@
 }
 
 .featureIcon {
-    color: #d4af37;
+    color: #facc15;
     font-weight: bold;
     margin-right: 10px;
     font-size: 18px;
@@ -230,7 +230,7 @@
 .serviceBtn {
     display: inline-block;
     padding: 10px 25px;
-    background: linear-gradient(90deg, #d4af37, #aa8c2c);
+    background: linear-gradient(90deg, #facc15, #aa8c2c);
     color: #000;
     font-weight: 600;
     border-radius: 5px;
@@ -268,12 +268,12 @@
     display: inline-block;
     padding: 8px 20px;
     background: rgba(0,0,0,0.5);
-    color: #d4af37;
+    color: #facc15;
     font-weight: 600;
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 1px solid #d4af37;
+    border: 1px solid #facc15;
     cursor: pointer;
     font-size: 14px;
     box-shadow: 0 4px 0 #b5912b, 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -281,7 +281,7 @@
 }
 
 .readMoreBtn:hover {
-    background: #d4af37;
+    background: #facc15;
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 6px 0 #b5912b, 0 8px 12px rgba(0, 0, 0, 0.3);
@@ -344,7 +344,7 @@
     align-items: center;
     justify-content: center;
     background: rgba(212, 175, 55, 0.2);
-    color: #d4af37;
+    color: #facc15;
     border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
@@ -366,7 +366,7 @@
 .modalTitle {
     font-size: 28px;
     font-weight: 700;
-    color: #d4af37;
+    color: #facc15;
     margin-bottom: 10px;
 }
 
@@ -418,12 +418,12 @@
     left: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(to bottom, #d4af37, transparent);
+    background: linear-gradient(to bottom, #facc15, transparent);
 }
 
 .highlightTitle {
     font-size: 28px;
-    color: #d4af37;
+    color: #facc15;
     margin-bottom: 20px;
 }
 
@@ -461,7 +461,7 @@
     justify-content: center;
     margin-right: 15px;
     flex-shrink: 0;
-    color: #d4af37;
+    color: #facc15;
     font-weight: bold;
 }
 
@@ -499,7 +499,7 @@
 .ctaBtn {
     display: inline-block;
     padding: 14px 30px;
-    background: linear-gradient(90deg, #d4af37, #aa8c2c);
+    background: linear-gradient(90deg, #facc15, #aa8c2c);
     color: #000;
     font-weight: 600;
     border-radius: 5px;

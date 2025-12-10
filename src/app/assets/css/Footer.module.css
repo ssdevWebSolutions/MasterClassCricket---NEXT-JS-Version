@@ -66,7 +66,7 @@
   }
   
   .socialLink:hover {
-    color: #fbbf24;
+    color: #facc15;
     transform: translateY(-2px);
   }
   
@@ -99,7 +99,7 @@
   }
   
   .link:hover {
-    color: #fbbf24;
+    color: #facc15;
   }
   
   /* Contact Information */
@@ -117,7 +117,7 @@
   }
   
   .contactItem i {
-    color: #fbbf24;
+    color: #facc15;
     margin-right: 1rem;
     margin-top: 0.2rem;
     min-width: 18px;
@@ -185,7 +185,7 @@
   }
   
   .developer {
-    color: #fbbf24;
+    color: #facc15;
     font-weight: 600;
   }
   
