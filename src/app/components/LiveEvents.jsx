@@ -7,17 +7,17 @@ const LiveEvents = () => {
     {
       id: 1,
       title: '10-Week Coaching Programme',
-      image: '/10_weekCoachingProgramme.png', // Update with your actual image path
+      image: '/10_weeks.jpeg', // Update with your actual image path
       alt: '10-Week Cricket Coaching Programme for ages 7-13',
       bookingUrl: 'https://masterclassbookings-rt5n.vercel.app/class2' // Update with actual booking link
     },
-    {
-      id: 2,
-      title: 'Elite Cricket Academy 2026',
-      image: '/EliteCricketCoaching.png', // Update with your actual image path
-      alt: '2026 Masterclass Elite Cricket Academy',
-      bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
-    }
+    // {
+    //   id: 2,
+    //   title: 'Elite Cricket Academy 2026',
+    //   image: '/EliteCricketCoaching.png', // Update with your actual image path
+    //   alt: '2026 Masterclass Elite Cricket Academy',
+    //   bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
+    // }
   ];
 
   const handleBookNow = (url) => {
