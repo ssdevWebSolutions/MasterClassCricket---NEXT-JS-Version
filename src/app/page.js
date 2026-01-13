@@ -91,7 +91,7 @@ const Main = () => {
     <LoadingScreen />
     <Navbar />
     {/* <AdvertisementBar /> */}
-    <LiveEvents />
+    {/* <LiveEvents /> */}
     <HeroSection />
     <VideoSection />
     <CricketServicesSection />
