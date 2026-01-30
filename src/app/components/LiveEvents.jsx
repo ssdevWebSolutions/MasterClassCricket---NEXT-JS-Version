@@ -7,7 +7,7 @@ const LiveEvents = () => {
     {
       id: 1,
       title: '10-Week Coaching Programme',
-      image: '/10_weeks.jpeg', // Update with your actual image path
+      image: '/Feb_.jpg', // Update with your actual image path
       alt: '10-Week Cricket Coaching Programme for ages 7-13',
       bookingUrl: 'https://masterclassbookings-rt5n.vercel.app/class2' // Update with actual booking link
     },
