@@ -41,7 +41,7 @@ const CoachesSection = () => {
       id: 3,
       name: "Anirudh Reddy",
       title: "Masterclass Coach",
-      experience: "5+ Years",
+      experience: "6+ Years",
       image: "/anirudhCoach3.png",
       bio: "Ani Reddy, an experienced ECB Level 2 cricket coach, has been guiding players under Head Coach Uzi for over 5 years. He specializes in refining techniques, enhancing mental toughness, and preparing athletes for county cricket success, focusing on performance."
     },
