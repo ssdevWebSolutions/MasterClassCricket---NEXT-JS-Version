@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import styles from '../assets/css/LoadingScreen.module.css';
+import React, { useState, useEffect } from "react";
+import styles from "../assets/css/LoadingScreen.module.css";
 
 const LoadingScreen = ({ onLoadingComplete, duration = 3000 }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -21,17 +21,21 @@ const LoadingScreen = ({ onLoadingComplete, duration = 3000 }) => {
   if (!isVisible) return null;
 
   return (
-    <div className={`${styles.loadingScreen} ${!isVisible ? styles.fadeOut : ''}`}>
+    <div
+      className={`${styles.loadingScreen} ${!isVisible ? styles.fadeOut : ""}`}
+    >
       <div className={styles.loadingContainer}>
         <div className={styles.loadingLogo}>
           <div className={styles.loadingSpinner}></div>
-          <img 
-            src="/logo_.ico" 
-            alt="Masterclass Cricket Academy Logo" 
+          <img
+            src="/logo_.ico"
+            alt="Masterclass Cricket Academy Logo"
             loading="lazy"
           />
         </div>
-        <div className={styles.loadingText}>Preparing Your Cricket Experience...</div>
+        <div className={styles.loadingText}>
+          Preparing Your Cricket Experience...
+        </div>
       </div>
     </div>
   );

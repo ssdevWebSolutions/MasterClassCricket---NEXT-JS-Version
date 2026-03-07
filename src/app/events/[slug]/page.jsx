@@ -75,7 +75,6 @@ const events = {
   },
 };
 
-
 export default function EventDetailsPage({ params }) {
   const event = events[params.slug];
 
@@ -169,9 +168,7 @@ export default function EventDetailsPage({ params }) {
 
             <button className="event-ticket-btn">Buy Tickets Now</button>
 
-            <p className="event-ticket-note">
-              Limited tickets available.
-            </p>
+            <p className="event-ticket-note">Limited tickets available.</p>
           </aside>
         </div>
       </main>

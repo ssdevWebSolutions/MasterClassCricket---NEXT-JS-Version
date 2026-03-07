@@ -1,15 +1,12 @@
-'use client';
+"use client";
 
-
-import { useEffect, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from '../assets/css/Navbar.module.css';
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../assets/css/Navbar.module.css";
 // import servicesData from '../data/servicesData';
-import servicesData from '../data/servicesData';
-
-
+import servicesData from "../data/servicesData";
 
 export default function Navbar() {
   const navToggleRef = useRef(null);
@@ -21,23 +18,25 @@ export default function Navbar() {
     const navToggle = navToggleRef.current;
     const navMenu = navMenuRef.current;
     const body = document.body;
-    const navLinks = document.querySelectorAll(`.${styles['headerHero-nav-link']}`);
-    const navbar = document.querySelector(`.${styles['headerHero-navbar']}`);
+    const navLinks = document.querySelectorAll(
+      `.${styles["headerHero-nav-link"]}`,
+    );
+    const navbar = document.querySelector(`.${styles["headerHero-navbar"]}`);
 
     const handleToggleClick = () => {
       navToggle.classList.toggle(styles.active);
       navMenu.classList.toggle(styles.active);
-      body.classList.toggle('menu-open');
+      body.classList.toggle("menu-open");
     };
 
     const handleOutsideClick = (event) => {
       if (
-        !event.target.closest('#headerHeroNavToggle') &&
-        !event.target.closest('#headerHeroNavMenu')
+        !event.target.closest("#headerHeroNavToggle") &&
+        !event.target.closest("#headerHeroNavMenu")
       ) {
         navToggle.classList.remove(styles.active);
         navMenu.classList.remove(styles.active);
-        body.classList.remove('menu-open');
+        body.classList.remove("menu-open");
       }
     };
 
@@ -51,54 +50,56 @@ export default function Navbar() {
       }
     };
 
-    navToggle.addEventListener('click', handleToggleClick);
-    document.addEventListener('click', handleOutsideClick);
-    window.addEventListener('scroll', updateNavbar);
+    navToggle.addEventListener("click", handleToggleClick);
+    document.addEventListener("click", handleOutsideClick);
+    window.addEventListener("scroll", updateNavbar);
     updateNavbar();
 
     return () => {
-      navToggle.removeEventListener('click', handleToggleClick);
-      document.removeEventListener('click', handleOutsideClick);
-      window.removeEventListener('scroll', updateNavbar);
+      navToggle.removeEventListener("click", handleToggleClick);
+      document.removeEventListener("click", handleOutsideClick);
+      window.removeEventListener("scroll", updateNavbar);
     };
   }, []);
 
   const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/Founders', label: 'Meet The Founder' },
-    { href: '/masterclass_elite_cricket_academy', label: 'Elite Academy' },
-    { href: '/meet-the-coaches', label: 'Meet The Coaches' }, // 👈 ADD THIS
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/Founders", label: "Meet The Founder" },
+    { href: "/masterclass_elite_cricket_academy", label: "Elite Academy" },
+    { href: "/meet-the-coaches", label: "Meet The Coaches" }, // 👈 ADD THIS
     // { href: '/testimonials', label: 'Testimonials' },
-   
-    { href: '/contact', label: 'Contact Us' }
+
+    { href: "/contact", label: "Contact Us" },
   ];
 
   const isActiveLink = (href) => {
-    if (href === '/') return pathname === '/';
+    if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 
   return (
-    <nav className={styles['headerHero-navbar']}>
-      <div className={styles['headerHero-navbar-container']}>
+    <nav className={styles["headerHero-navbar"]}>
+      <div className={styles["headerHero-navbar-container"]}>
         {/* Logo */}
-        <div className={styles['headerHero-navbar-logo']}>
+        <div className={styles["headerHero-navbar-logo"]}>
           <Link href="/">
             <Image
               src="/logo_.ico"
               alt="Masterclass Cricket Logo"
               width={50}
               height={50}
-              className={styles['headerHero-logo-image']}
+              className={styles["headerHero-logo-image"]}
             />
           </Link>
-          <span className={styles['headerHero-logo-text']}>MASTERCLASS CRICKET</span>
+          <span className={styles["headerHero-logo-text"]}>
+            MASTERCLASS CRICKET
+          </span>
         </div>
 
         {/* Mobile Toggle */}
         <div
-          className={styles['headerHero-navbar-toggle']}
+          className={styles["headerHero-navbar-toggle"]}
           id="headerHeroNavToggle"
           ref={navToggleRef}
         >
@@ -108,13 +109,17 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Menu */}
-        <ul className={styles['headerHero-navbar-menu']} id="headerHeroNavMenu" ref={navMenuRef}>
+        <ul
+          className={styles["headerHero-navbar-menu"]}
+          id="headerHeroNavMenu"
+          ref={navMenuRef}
+        >
           {navItems.map((item) => (
-            <li key={item.href} className={styles['headerHero-nav-item']}>
+            <li key={item.href} className={styles["headerHero-nav-item"]}>
               <Link
                 href={item.href}
-                className={`${styles['headerHero-nav-link']} ${
-                  isActiveLink(item.href) ? styles.active : ''
+                className={`${styles["headerHero-nav-link"]} ${
+                  isActiveLink(item.href) ? styles.active : ""
                 }`}
               >
                 {item.label}
@@ -143,10 +148,12 @@ export default function Navbar() {
           </li> */}
 
           {/* CTA Button */}
-          <li className={`${styles['headerHero-nav-item']} ${styles['headerHero-nav-cta']}`}>
+          <li
+            className={`${styles["headerHero-nav-item"]} ${styles["headerHero-nav-cta"]}`}
+          >
             <a
               href="https://masterclassbookings-rt5n.vercel.app/"
-              className={styles['headerHero-book-now-btn']}
+              className={styles["headerHero-book-now-btn"]}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -158,4 +165,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

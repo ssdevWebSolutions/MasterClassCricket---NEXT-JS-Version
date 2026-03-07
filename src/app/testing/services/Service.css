@@ -1,291 +1,289 @@
 /* ---------- CONTAINER ---------- */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-  
-  /* ---------- SECTION BACKGROUND ---------- */
-  .section {
-    padding: 5rem 0;
-    background: #0b0b0d; /* deep black */
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-  }
-  
-  /* ---------- HEADER ---------- */
-  .header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-  
-  /* Elite Training Badge */
-  .badge {
-    display: inline-block;
-    border: 1px solid #facc15;
-    color: #facc15;
-    margin-bottom: 1rem;
-    padding: 0.35rem 1.1rem;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 700;
-    border-radius: 9999px;
-  }
-  
-  /* Title: PREMIUM SERVICES */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- SECTION BACKGROUND ---------- */
+.section {
+  padding: 5rem 0;
+  background: #0b0b0d; /* deep black */
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Elite Training Badge */
+.badge {
+  display: inline-block;
+  border: 1px solid #facc15;
+  color: #facc15;
+  margin-bottom: 1rem;
+  padding: 0.35rem 1.1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  border-radius: 9999px;
+}
+
+/* Title: PREMIUM SERVICES */
+.title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1.5rem;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
   .title {
-    font-size: 1.875rem;
-    font-weight: 800;
-    font-family: "Playfair Display", serif;
-    margin-bottom: 1.5rem;
-    color: white;
-    letter-spacing: 0.02em;
+    font-size: 3rem;
   }
-  
-  @media (min-width: 768px) {
-    .title {
-      font-size: 3rem;
-    }
-  }
-  
-  /* “SERVICES” highlighted in gold */
-  .highlight {
-    color: #facc15;
-  }
-  
-  /* Subtitle */
-  .description {
-    color: #9ca3af;
-    max-width: 42rem;
-    margin: 0 auto;
-    font-size: 1.05rem;
-  }
-  
+}
 
-  
- 
+/* “SERVICES” highlighted in gold */
+.highlight {
+  color: #facc15;
+}
 
+/* Subtitle */
+.description {
+  color: #9ca3af;
+  max-width: 42rem;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+/* Tablet (2 per row) */
+@media (min-width: 768px) {
   .grid {
-    display: grid;
-    gap: 1.5rem;
-    max-width: 75rem;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Tablet (2 per row) */
-  @media (min-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
+
+/* Desktop (4 per row) */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  /* Desktop (4 per row) */
-  @media (min-width: 1200px) {
-    .grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  
-  /* ---------- CARD ---------- */
-  .card {
-    background: #111113; /* deep soft black */
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 0.9rem;
-    padding: 1.8rem;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-  }
-  
-  .card:hover {
-    border-color: rgba(250, 204, 21, 0.4);
-    transform: translateY(-2px);
-  }
-  
-  /* ---------- BACKGROUND ICON ---------- */
-  .bgIcon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    opacity: 0.08;
-    transition: opacity 0.3s ease;
-  }
-  
-  .card:hover .bgIcon {
-    opacity: 0.15;
-  }
-  
-  .bgIcon svg {
-    width: 7rem;
-    height: 7rem;
-    color: #facc15;
-  }
-  
-  /* ---------- CONTENT WRAPPER ---------- */
-  .contentWrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    position: relative;
-    z-index: 10;
-  }
-  
-  /* ---------- ICON BOX ---------- */
-  .iconBox {
-    height: 3.2rem;
-    width: 3.2rem;
-    border-radius: 0.55rem;
-    background: #18181b;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.25s ease, color 0.25s ease;
-  }
-  
-  .card:hover .iconBox {
-    background-color: #facc15;
-    color: black;
-  }
-  
-  .iconBox svg {
-    width: 1.55rem;
-    height: 1.55rem;
-    color: white;
-  }
-  
-  .card:hover .iconBox svg {
-    color: black;
-  }
-  
-  /* ---------- TEXT CONTENT ---------- */
-  .textContent {
-    flex: 1;
-  }
-  
-  /* Header (badge + title + price) */
-  .cardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  /* Badge inside card */
-  .cardBadge {
-    display: inline-block;
-    background-color: #18181b;
-    color: #facc15;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    font-size: 0.65rem;
-    margin-bottom: 0.5rem;
-    padding: 0.15rem 0.65rem;
-    border-radius: 9999px;
-  }
-  
-  /* Title */
-  .cardTitle {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: white;
-    margin-top: 0.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  .card:hover .cardTitle {
-    color: #facc15;
-  }
-  
-  /* Price Tag */
-  .priceTag {
-    font-size: 0.8rem;
-    font-family: monospace;
-    color: #9ca3af;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 0.3rem 0.55rem;
-    border-radius: 0.3rem;
-    background-color: #0f0f11;
-  }
-  
-  /* Description */
-  .cardDesc {
-    color: #a1a1aa;
-    font-size: 0.93rem;
-    line-height: 1.65;
-    margin-top: 0.7rem;
-  }
-  
-  /* ---------- ACTION BUTTONS ---------- */
-  .actions {
-    padding-top: 1.2rem;
-    display: flex;
-    gap: 1rem;
-    opacity: 0;
-    transform: translateY(0.4rem);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .card:hover .actions {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* BOOK NOW button */
-  .bookBtn {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .bookBtn:hover {
-    color: #facc15;
-  }
-  
-  .bookBtn svg {
-    width: 0.75rem;
-    height: 0.75rem;
-  }
-  
-  /* READ MORE */
-  .readMoreBtn {
-    font-size: 0.9rem;
-    color: #8b8b93;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .readMoreBtn:hover {
-    color: white;
-  }
-  
-  /* ---------- FOOTER BUTTON ---------- */
-  .footer {
-    margin-top: 4rem;
-    text-align: center;
-  }
-  
-  .scheduleBtn {
-    background-color: #facc15;
-    color: black;
-    font-weight: 700;
-    padding: 0.85rem 2.2rem;
-    border-radius: 9999px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s ease;
-  }
-  
-  .scheduleBtn:hover {
-    background-color: #e0b614;
-  }
-  
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background: #111113; /* deep soft black */
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 0.9rem;
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.card:hover {
+  border-color: rgba(250, 204, 21, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ---------- BACKGROUND ICON ---------- */
+.bgIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  opacity: 0.08;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .bgIcon {
+  opacity: 0.15;
+}
+
+.bgIcon svg {
+  width: 7rem;
+  height: 7rem;
+  color: #facc15;
+}
+
+/* ---------- CONTENT WRAPPER ---------- */
+.contentWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* ---------- ICON BOX ---------- */
+.iconBox {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 0.55rem;
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.card:hover .iconBox {
+  background-color: #facc15;
+  color: black;
+}
+
+.iconBox svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  color: white;
+}
+
+.card:hover .iconBox svg {
+  color: black;
+}
+
+/* ---------- TEXT CONTENT ---------- */
+.textContent {
+  flex: 1;
+}
+
+/* Header (badge + title + price) */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Badge inside card */
+.cardBadge {
+  display: inline-block;
+  background-color: #18181b;
+  color: #facc15;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  font-size: 0.65rem;
+  margin-bottom: 0.5rem;
+  padding: 0.15rem 0.65rem;
+  border-radius: 9999px;
+}
+
+/* Title */
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 0.2rem;
+  transition: color 0.3s ease;
+}
+
+.card:hover .cardTitle {
+  color: #facc15;
+}
+
+/* Price Tag */
+.priceTag {
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #9ca3af;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.3rem 0.55rem;
+  border-radius: 0.3rem;
+  background-color: #0f0f11;
+}
+
+/* Description */
+.cardDesc {
+  color: #a1a1aa;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  margin-top: 0.7rem;
+}
+
+/* ---------- ACTION BUTTONS ---------- */
+.actions {
+  padding-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(0.4rem);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card:hover .actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BOOK NOW button */
+.bookBtn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bookBtn:hover {
+  color: #facc15;
+}
+
+.bookBtn svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* READ MORE */
+.readMoreBtn {
+  font-size: 0.9rem;
+  color: #8b8b93;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.readMoreBtn:hover {
+  color: white;
+}
+
+/* ---------- FOOTER BUTTON ---------- */
+.footer {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.scheduleBtn {
+  background-color: #facc15;
+  color: black;
+  font-weight: 700;
+  padding: 0.85rem 2.2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.scheduleBtn:hover {
+  background-color: #e0b614;
+}

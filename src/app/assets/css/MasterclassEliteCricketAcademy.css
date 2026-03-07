@@ -3,7 +3,7 @@ body {
   padding: 0;
   background-color: #000;
   color: #facc15;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Container */
@@ -13,7 +13,6 @@ body {
   align-items: center;
   padding: 2rem 1rem;
 }
-
 
 /* HERO SECTION */
 .hero-section {
@@ -29,7 +28,7 @@ body {
   margin-top: 5%;
   margin-bottom: 1.2rem;
   color: #ffffff;
-font-weight:bold;
+  font-weight: bold;
 }
 
 .hero-content {
@@ -43,8 +42,8 @@ font-weight:bold;
 .hero-image {
   width: 100%;
   height: 550px;
-  background-image: url('/LogisticEmailHeader.png');
-  background-size: cover;       /* ✅ Fills area perfectly */
+  background-image: url("/LogisticEmailHeader.png");
+  background-size: cover; /* ✅ Fills area perfectly */
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -57,7 +56,7 @@ font-weight:bold;
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   border-radius: 10px;
 }
 
@@ -90,26 +89,37 @@ font-weight:bold;
 
 /* Large Screens */
 @media (min-width: 1440px) {
-  .hero-section{ margin-top: 40px;}
-  .hero-image { height: 630px; }
+  .hero-section {
+    margin-top: 40px;
+  }
+  .hero-image {
+    height: 630px;
+  }
 }
 
 /* Tablets */
 @media (max-width: 1024px) and (min-width: 641px) {
-  .hero-section{ margin-top: 100px;}
-  .hero-image { height: 420px; }
-  .hero-title { font-size: 2.1rem; }
+  .hero-section {
+    margin-top: 100px;
+  }
+  .hero-image {
+    height: 420px;
+  }
+  .hero-title {
+    font-size: 2.1rem;
+  }
 }
 
 /* Mobiles */
 @media (max-width: 640px) {
-  .hero-section{ margin-top: 40px;}
+  .hero-section {
+    margin-top: 40px;
+  }
   .hero-image {
-    background-image: url('/Website Mobile Banner .png'); /* ✅ Mobile image */
+    background-image: url("/Website Mobile Banner .png"); /* ✅ Mobile image */
     height: 500px;
-    background-size: cover;  /* ✅ Always fill */
+    background-size: cover; /* ✅ Always fill */
     background-position: center;
-
   }
 
   .hero-title {
@@ -124,8 +134,12 @@ font-weight:bold;
 
 /* Extra Small Phones */
 @media (max-width: 360px) {
-  .hero-image { height: 400px;    }
-  .hero-title { font-size: 1.6rem; }
+  .hero-image {
+    height: 400px;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
   .book-btn {
     bottom: 18px;
     padding: 0.5rem 1.3rem;
@@ -134,9 +148,15 @@ font-weight:bold;
 }
 
 @media (max-width: 470px) {
-  .hero-section{ margin-top: 40px;}
-  .hero-image { height: 550px;  }
-  .hero-title { font-size: 1.6rem; }
+  .hero-section {
+    margin-top: 40px;
+  }
+  .hero-image {
+    height: 550px;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
   .book-btn {
     bottom: 18px;
     padding: 0.5rem 1.3rem;
@@ -144,7 +164,6 @@ font-weight:bold;
   }
 }
 
-  
 /* About Section */
 .about-section {
   text-align: center;
@@ -194,7 +213,9 @@ font-weight:bold;
   border-radius: 10px;
   text-align: center;
   max-width: 350px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .expect-card:hover {
@@ -261,8 +282,8 @@ font-weight:bold;
   position: relative;
   width: 100%;
   height: 65vh; /* fills 70% of viewport height */
-  background-image: url('/fielding.png'); /* replace with your actual image path */
-  background-size: cover;      /* ensures full coverage */
+  background-image: url("/fielding.png"); /* replace with your actual image path */
+  background-size: cover; /* ensures full coverage */
   background-position: center; /* centers subject */
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -326,14 +347,11 @@ font-weight:bold;
     padding: 0.5rem;
     margin-top: -15%;
     font-size: 0.95rem;
-   
   }
 }
 
-
-.about-section p
-{
-  padding:10px ;
+.about-section p {
+  padding: 10px;
 }
 
 /* Card Section */
@@ -373,7 +391,9 @@ font-weight:bold;
   padding: 1.5rem;
   color: #facc15;
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -396,5 +416,3 @@ font-weight:bold;
   line-height: 1.5;
   text-align: center;
 }
-
-

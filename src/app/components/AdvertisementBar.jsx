@@ -1,14 +1,23 @@
-'use client';
-import React from 'react';
-import styles from '../assets/css/AdvertisementBar.module.css';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import styles from "../assets/css/AdvertisementBar.module.css";
+import Link from "next/link";
 
 const AdvertisementBar = () => {
   const updates = [
-    { text: '🏏 New Training Camp – Book Now', link: '/events/training-camp' },
-    { text: '🔥 Early Bird Offer for December Coaching', link: '/events/december-coaching' },
-    { text: '💪 Player Performance Dashboard Updated', link: '/dashboard/player' },
-    { text: '⚡ Limited Slots Available – Join the Masterclass!', link: '/bookings' },
+    { text: "🏏 New Training Camp – Book Now", link: "/events/training-camp" },
+    {
+      text: "🔥 Early Bird Offer for December Coaching",
+      link: "/events/december-coaching",
+    },
+    {
+      text: "💪 Player Performance Dashboard Updated",
+      link: "/dashboard/player",
+    },
+    {
+      text: "⚡ Limited Slots Available – Join the Masterclass!",
+      link: "/bookings",
+    },
   ];
 
   // Duplicate items for seamless scroll

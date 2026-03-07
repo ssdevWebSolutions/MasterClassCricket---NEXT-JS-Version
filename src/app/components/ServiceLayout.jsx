@@ -1,18 +1,29 @@
-'use client';
-import styles from '../assets/css/ServiceLayout.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import styles from "../assets/css/ServiceLayout.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function ServiceLayout({ title, subtitle, description, image, expectations }) {
+export default function ServiceLayout({
+  title,
+  subtitle,
+  description,
+  image,
+  expectations,
+}) {
   return (
     <div className={styles.serviceContainer}>
       {/* ======= HEADER ======= */}
       <header className={styles.topNav}>
         <div>
-          <Link href="/" className={styles.navLink}>Home</Link>
+          <Link href="/" className={styles.navLink}>
+            Home
+          </Link>
         </div>
         <div>
-          <Link href="https://masterclassbookings-rt5n.vercel.app/" className={styles.navLink}>
+          <Link
+            href="https://masterclassbookings-rt5n.vercel.app/"
+            className={styles.navLink}
+          >
             Booking
           </Link>
         </div>

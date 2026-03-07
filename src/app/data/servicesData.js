@@ -21,10 +21,13 @@ This high-end service is the pinnacle of the Masterclass Cricket experience — 
     `,
     image: "/1-2-1-coaching.png",
     expectations: [
-      { title: "Personalized Training", image: "/images/expect-personalized.jpg" },
+      {
+        title: "Personalized Training",
+        image: "/images/expect-personalized.jpg",
+      },
       { title: "Expert Guidance", image: "/images/expect-expert.jpg" },
-      { title: "Flexible Scheduling", image: "/images/expect-schedule.jpg" }
-    ]
+      { title: "Flexible Scheduling", image: "/images/expect-schedule.jpg" },
+    ],
   },
   {
     slug: "small-group-sessions",
@@ -39,8 +42,8 @@ This approach enhances decision-making, adaptability, and confidence, preparing 
     expectations: [
       { title: "Scenario Training", image: "/images/expect-scenario.jpg" },
       { title: "Match Simulations", image: "/images/expect-match.jpg" },
-      { title: "Peer Learning", image: "/images/expect-peers.jpg" }
-    ]
+      { title: "Peer Learning", image: "/images/expect-peers.jpg" },
+    ],
   },
   {
     slug: "masterclass-academy-sessions",
@@ -53,10 +56,13 @@ At the heart of our academy is the Masterclass Cricket Curriculum, which provide
     `,
     image: "/masterclass-academy.png",
     expectations: [
-      { title: "Curriculum-Based Coaching", image: "/images/expect-curriculum.jpg" },
+      {
+        title: "Curriculum-Based Coaching",
+        image: "/images/expect-curriculum.jpg",
+      },
       { title: "Weekly Assessments", image: "/images/expect-assess.jpg" },
-      { title: "Skill Progression", image: "/images/expect-progression.jpg" }
-    ]
+      { title: "Skill Progression", image: "/images/expect-progression.jpg" },
+    ],
   },
   {
     slug: "elite-performance-clinics",
@@ -75,8 +81,8 @@ Our Elite Performance Camps are designed for advanced players looking to take th
     expectations: [
       { title: "Biomechanical Assessment", image: "/images/expect-bio.jpg" },
       { title: "Advanced Tactics", image: "/images/expect-tactics.jpg" },
-      { title: "Strength & Conditioning", image: "/images/expect-fitness.jpg" }
-    ]
+      { title: "Strength & Conditioning", image: "/images/expect-fitness.jpg" },
+    ],
   },
   {
     slug: "tours-for-clubs-and-members",
@@ -94,8 +100,8 @@ Our domestic and international tours provide a unique opportunity for players to
     expectations: [
       { title: "Competitive Fixtures", image: "/images/expect-fixtures.jpg" },
       { title: "Adaptability Training", image: "/images/expect-adapt.jpg" },
-      { title: "Team Bonding", image: "/images/expect-bonding.jpg" }
-    ]
+      { title: "Team Bonding", image: "/images/expect-bonding.jpg" },
+    ],
   },
   {
     slug: "corporate-team-building-events",
@@ -114,8 +120,8 @@ Whether you're looking for a motivational day out or a high-performance leadersh
     expectations: [
       { title: "Leadership Drills", image: "/images/expect-leadership.jpg" },
       { title: "Team Activities", image: "/images/expect-team.jpg" },
-      { title: "Problem Solving", image: "/images/expect-problem.jpg" }
-    ]
+      { title: "Problem Solving", image: "/images/expect-problem.jpg" },
+    ],
   },
   {
     slug: "online-bowling-assessments",
@@ -134,8 +140,8 @@ Perfect for aspiring fast bowlers and spinners seeking elite-level coaching with
     expectations: [
       { title: "Video Analysis", image: "/images/expect-video.jpg" },
       { title: "Correction Plans", image: "/images/expect-correct.jpg" },
-      { title: "Targeted Drills", image: "/images/expect-drills.jpg" }
-    ]
+      { title: "Targeted Drills", image: "/images/expect-drills.jpg" },
+    ],
   },
   {
     slug: "school-coaching-programmes",
@@ -154,8 +160,11 @@ All sessions follow our Masterclass Cricket curriculum, ensuring a fun, structur
     expectations: [
       { title: "Teacher Training", image: "/images/expect-teacher.jpg" },
       { title: "Student Masterclasses", image: "/images/expect-students.jpg" },
-      { title: "Structured Curriculum", image: "/images/expect-curriculum2.jpg" }
-    ]
+      {
+        title: "Structured Curriculum",
+        image: "/images/expect-curriculum2.jpg",
+      },
+    ],
   },
   {
     slug: "online-batting-assessments",
@@ -172,8 +181,8 @@ Submit your batting footage for a professional technical breakdown from our coac
     expectations: [
       { title: "Shot Analysis", image: "/images/expect-shot.jpg" },
       { title: "Technique Fixes", image: "/images/expect-tech.jpg" },
-      { title: "Personal Plans", image: "/images/expect-plan.jpg" }
-    ]
+      { title: "Personal Plans", image: "/images/expect-plan.jpg" },
+    ],
   },
   {
     slug: "mental-mind-mapping-course",
@@ -190,8 +199,8 @@ Whether you're striving for peak performance or looking to overcome mental barri
     expectations: [
       { title: "Focus Techniques", image: "/images/expect-focus.jpg" },
       { title: "Stress Management", image: "/images/expect-stress.jpg" },
-      { title: "Decision Drills", image: "/images/expect-decision.jpg" }
-    ]
+      { title: "Decision Drills", image: "/images/expect-decision.jpg" },
+    ],
   },
   {
     slug: "master-class-elite-academy",
@@ -212,9 +221,12 @@ This is where potential transforms into performance — where the next generatio
     expectations: [
       { title: "Performance Analytics", image: "/images/expect-analytics.jpg" },
       { title: "Elite Mentorship", image: "/images/expect-mentor.jpg" },
-      { title: "Full Performance Package", image: "/images/expect-package.jpg" }
-    ]
-  }
+      {
+        title: "Full Performance Package",
+        image: "/images/expect-package.jpg",
+      },
+    ],
+  },
 ];
 
 export default servicesData;

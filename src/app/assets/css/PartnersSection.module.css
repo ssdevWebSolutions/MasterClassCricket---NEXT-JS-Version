@@ -1,466 +1,509 @@
 /* partners */
 
 .partnershipEliteSection {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    padding: 100px 0;
-    background-color: #000;
-    background-image:
-        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 20%);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background-color: #000;
+  background-image:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(212, 175, 55, 0.03) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(212, 175, 55, 0.03) 0%,
+      transparent 20%
+    );
 }
 
 /* Cricket decorative elements */
 .cricketElement {
-    position: absolute;
-    opacity: 0.07;
-    z-index: 0;
+  position: absolute;
+  opacity: 0.07;
+  z-index: 0;
 }
 
 .cricketBall {
-    width: 120px;
-    height: 120px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23D4AF37'/%3E%3Cpath d='M50,5 C50,5 50,95 50,95' stroke='white' stroke-width='2' fill='none' opacity='0.5'/%3E%3Cpath d='M50,5 C65,20 65,80 50,95' stroke='white' stroke-width='2' fill='none' opacity='0.5'/%3E%3Cpath d='M50,5 C35,20 35,80 50,95' stroke='white' stroke-width='2' fill='none' opacity='0.5'/%3E%3C/svg%3E") no-repeat center/contain;
-    top: 10%;
-    right: 5%;
-    animation: floatBall 20s infinite linear;
+  width: 120px;
+  height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23D4AF37'/%3E%3Cpath d='M50,5 C50,5 50,95 50,95' stroke='white' stroke-width='2' fill='none' opacity='0.5'/%3E%3Cpath d='M50,5 C65,20 65,80 50,95' stroke='white' stroke-width='2' fill='none' opacity='0.5'/%3E%3Cpath d='M50,5 C35,20 35,80 50,95' stroke='white' stroke-width='2' fill='none' opacity='0.5'/%3E%3C/svg%3E")
+    no-repeat center/contain;
+  top: 10%;
+  right: 5%;
+  animation: floatBall 20s infinite linear;
 }
 
 .cricketBat {
-    width: 60px;
-    height: 300px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 500'%3E%3Cdefs%3E%3ClinearGradient id='batGradient' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23D4AF37'/%3E%3Cstop offset='100%25' stop-color='%23e5c76b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='43' y='10' width='14' height='120' rx='7' fill='%23fff'/%3E%3Cpath d='M43,130 C40,135 30,140 30,145 L30,155 L70,155 L70,145 C70,140 60,135 57,130 Z' fill='%23D4AF37'/%3E%3Cpath d='M30,155 L30,400 C30,430 50,440 50,440 C50,440 70,430 70,400 L70,155 Z' fill='url(%23batGradient)'/%3E%3C/svg%3E") no-repeat center/contain;
-    bottom: 5%;
-    left: 8%;
-    transform: rotate(30deg);
+  width: 60px;
+  height: 300px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 500'%3E%3Cdefs%3E%3ClinearGradient id='batGradient' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23D4AF37'/%3E%3Cstop offset='100%25' stop-color='%23e5c76b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='43' y='10' width='14' height='120' rx='7' fill='%23fff'/%3E%3Cpath d='M43,130 C40,135 30,140 30,145 L30,155 L70,155 L70,145 C70,140 60,135 57,130 Z' fill='%23D4AF37'/%3E%3Cpath d='M30,155 L30,400 C30,430 50,440 50,440 C50,440 70,430 70,400 L70,155 Z' fill='url(%23batGradient)'/%3E%3C/svg%3E")
+    no-repeat center/contain;
+  bottom: 5%;
+  left: 8%;
+  transform: rotate(30deg);
 }
 
 /* Heading Styles */
 .partnershipHeadingContainer {
-    position: relative;
-    margin-bottom: 80px;
+  position: relative;
+  margin-bottom: 80px;
 }
 
 .partnershipSubtitle {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #facc15;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #facc15;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .partnershipSubtitle::before,
 .partnershipSubtitle::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: #facc15;
-    top: 50%;
-    width: 30px;
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #facc15;
+  top: 50%;
+  width: 30px;
 }
 
 .partnershipSubtitle::before {
-    right: calc(100% + 15px);
+  right: calc(100% + 15px);
 }
 
 .partnershipSubtitle::after {
-    left: calc(100% + 15px);
+  left: calc(100% + 15px);
 }
 
 .partnershipSubtitle.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .partnershipTitle {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #fff;
-    margin: 0 0 20px;
-    letter-spacing: 1px;
-    position: relative;
-    text-transform: uppercase;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease-out 0.2s, transform 1s ease-out 0.2s;
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 20px;
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 1s ease-out 0.2s,
+    transform 1s ease-out 0.2s;
 }
 
 .partnershipTitle.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .partnershipTitleHighlight {
-    color: #facc15;
-    position: relative;
-    display: inline-block;
+  color: #facc15;
+  position: relative;
+  display: inline-block;
 }
 
 .partnershipTitleHighlight::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 8px;
-    background: rgba(212, 175, 55, 0.3);
-    bottom: 8px;
-    left: 0;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: rgba(212, 175, 55, 0.3);
+  bottom: 8px;
+  left: 0;
+  z-index: -1;
 }
 
 .partnershipTitleBackground {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    font-size: 10rem;
-    font-weight: 800;
-    font-family: 'Playfair Display', serif;
-    color: rgba(212, 175, 55, 0.03);
-    z-index: -1;
-    white-space: nowrap;
-    user-select: none;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 1.5s ease-out 0.3s, transform 1.5s ease-out 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  font-size: 10rem;
+  font-weight: 800;
+  font-family: "Playfair Display", serif;
+  color: rgba(212, 175, 55, 0.03);
+  z-index: -1;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity 1.5s ease-out 0.3s,
+    transform 1.5s ease-out 0.3s;
 }
 
 .partnershipTitleBackground.visible {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .partnershipDescription {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 850px;
-    margin: 0 auto 40px;
-    line-height: 1.7;
-    font-weight: 300;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out 0.4s, transform 1s ease-out 0.4s;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 850px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1s ease-out 0.4s,
+    transform 1s ease-out 0.4s;
 }
 
 .partnershipDescription.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Partners Container Styles */
 .partnersEliteContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 50px 20px;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .partnersEliteContainer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.5),
+    transparent
+  );
 }
 
 .partnerLink {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .partnerCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 200px;
-    height: 150px;
-    background: #facc15;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 10px;
-    justify-content: center;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
-    opacity: 0;
-    transform: translateY(30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+  background: #facc15;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease,
+    border-color 0.5s ease;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .partnerCard::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.05), transparent);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(212, 175, 55, 0.05),
+    transparent
+  );
+  z-index: -1;
 }
 
 .partnerCard.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .partnerCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
-    border-color: rgba(212, 175, 55, 0.6);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.6);
 }
 
 .partnerLogo {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 0%;
-    transition: transform 0.5s ease, filter 0.5s ease;
-    filter: grayscale(100%) brightness(0.8) contrast(1.2);
-    object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0%;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+  filter: grayscale(100%) brightness(0.8) contrast(1.2);
+  object-fit: contain;
 }
 
 .partnerCard:hover .partnerLogo {
-    transform: scale(1.1);
-    filter: grayscale(0%) brightness(1) contrast(1);
+  transform: scale(1.1);
+  filter: grayscale(0%) brightness(1) contrast(1);
 }
 
 .partnerRing {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    transform: scale(1.1);
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transform: scale(1.1);
+  opacity: 0;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .partnerCard:hover .partnerRing {
-    border-color: rgba(212, 175, 55, 0.5);
-    transform: scale(1.05);
-    opacity: 1;
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 /* Partner Level Badge */
 .partnerLevel {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 0.7rem;
-    color: #000;
-    background: #facc15;
-    padding: 3px 8px;
-    border-radius: 3px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.7rem;
+  color: #000;
+  background: #facc15;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateX(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .partnerCard:hover .partnerLevel {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Coupon Code Styles */
 .couponCode {
-    font-size: 0.8rem;
-    color: #000;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 4px 8px;
-    border-radius: 4px;
-    margin-top: 8px;
-    font-weight: 500;
+  font-size: 0.8rem;
+  color: #000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-weight: 500;
 }
 
 /* Partnership Trophy Decoration */
 .partnershipTrophy {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'%3E%3Cpath d='M40,10 h20 v10 h10 v5 h-40 v-5 h10 z' fill='%23D4AF37'/%3E%3Cpath d='M45,25 h10 v80 h-10 z' fill='%23D4AF37'/%3E%3Cpath d='M35,105 h30 v5 h-30 z' fill='%23D4AF37'/%3E%3Cpath d='M30,110 h40 v10 h-40 z' fill='%23D4AF37'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.06;
-    z-index: 0;
-    right: 5%;
-    bottom: 10%;
-    transform: rotate(-15deg);
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'%3E%3Cpath d='M40,10 h20 v10 h10 v5 h-40 v-5 h10 z' fill='%23D4AF37'/%3E%3Cpath d='M45,25 h10 v80 h-10 z' fill='%23D4AF37'/%3E%3Cpath d='M35,105 h30 v5 h-30 z' fill='%23D4AF37'/%3E%3Cpath d='M30,110 h40 v10 h-40 z' fill='%23D4AF37'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.06;
+  z-index: 0;
+  right: 5%;
+  bottom: 10%;
+  transform: rotate(-15deg);
 }
 
 /* View All Partners Button */
 .viewAllPartners {
-    display: inline-block;
-    background: transparent;
-    color: #facc15;
-    border: 1px solid #facc15;
-    padding: 12px 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 40px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(20px);
+  display: inline-block;
+  background: transparent;
+  color: #facc15;
+  border: 1px solid #facc15;
+  padding: 12px 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .viewAllPartners.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 1s ease-out 0.6s, transform 1s ease-out 0.6s, background 0.3s ease, color 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 1s ease-out 0.6s,
+    transform 1s ease-out 0.6s,
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .viewAllPartners:hover {
-    background: #facc15;
-    color: #000;
+  background: #facc15;
+  color: #000;
 }
 
 .viewAllPartners::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s ease,
+    height 0.6s ease;
 }
 
 .viewAllPartners:hover::after {
-    width: 300px;
-    height: 300px;
+  width: 300px;
+  height: 300px;
 }
 
 @keyframes floatBall {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
 
-    50% {
-        transform: translateY(-30px) rotate(180deg);
-    }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
 
-    100% {
-        transform: translateY(0) rotate(360deg);
-    }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
 }
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
-    .partnershipTitle {
-        font-size: 2.8rem;
-    }
+  .partnershipTitle {
+    font-size: 2.8rem;
+  }
 
-    .partnershipTitleBackground {
-        font-size: 7rem;
-    }
+  .partnershipTitleBackground {
+    font-size: 7rem;
+  }
 
-    .partnersEliteContainer {
-        gap: 40px;
-    }
+  .partnersEliteContainer {
+    gap: 40px;
+  }
 }
 
 @media (max-width: 768px) {
-    .partnershipEliteSection {
-        padding: 80px 0;
-    }
+  .partnershipEliteSection {
+    padding: 80px 0;
+  }
 
-    .partnershipTitle {
-        font-size: 2.2rem;
-    }
+  .partnershipTitle {
+    font-size: 2.2rem;
+  }
 
-    .partnershipTitleBackground {
-        font-size: 5rem;
-    }
+  .partnershipTitleBackground {
+    font-size: 5rem;
+  }
 
-    .partnershipDescription {
-        font-size: 1rem;
-        padding: 0 20px;
-    }
+  .partnershipDescription {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
 
-    .cricketBall {
-        width: 80px;
-        height: 80px;
-    }
+  .cricketBall {
+    width: 80px;
+    height: 80px;
+  }
 
-    .cricketBat {
-        width: 40px;
-        height: 200px;
-    }
+  .cricketBat {
+    width: 40px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 576px) {
-    .partnershipSubtitle {
-        font-size: 0.8rem;
-    }
+  .partnershipSubtitle {
+    font-size: 0.8rem;
+  }
 
-    .partnershipTitle {
-        font-size: 1.8rem;
-    }
+  .partnershipTitle {
+    font-size: 1.8rem;
+  }
 
-    .partnershipTitleBackground {
-        font-size: 4rem;
-    }
+  .partnershipTitleBackground {
+    font-size: 4rem;
+  }
 
-    .partnersEliteContainer {
-        gap: 30px;
-    }
+  .partnersEliteContainer {
+    gap: 30px;
+  }
 
-    .partnerCard {
-        width: 160px;
-        height: 120px;
-    }
+  .partnerCard {
+    width: 160px;
+    height: 120px;
+  }
 }
 
 /* Transition Delays for Partner Cards */
 .partnerCard:nth-child(1) {
-    transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .partnerCard:nth-child(2) {
-    transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .partnerCard:nth-child(3) {
-    transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 
 .partnerCard:nth-child(4) {
-    transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 
 .partnerCard:nth-child(5) {
-    transition-delay: 0.6s;
+  transition-delay: 0.6s;
 }
 
 .partnerCard:nth-child(6) {
-    transition-delay: 0.7s;
+  transition-delay: 0.7s;
 }

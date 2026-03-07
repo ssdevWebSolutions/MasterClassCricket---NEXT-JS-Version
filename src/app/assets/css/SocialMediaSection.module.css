@@ -8,7 +8,7 @@
 }
 
 .igSectionTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
@@ -16,7 +16,7 @@
 }
 
 .igHighlight {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   color: #facc15;
   /* Yellow-500 */
 }
@@ -78,14 +78,14 @@
 /* Media query for tablets */
 @media (min-width: 640px) {
   .igReelsGrid {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Media query for desktop */
 @media (min-width: 1024px) {
   .igReelsGrid {
-      grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -246,7 +246,7 @@
 
 @media (min-width: 768px) {
   .igContentTitle {
-      font-size: 1.75rem;
+    font-size: 1.75rem;
   }
 }
 

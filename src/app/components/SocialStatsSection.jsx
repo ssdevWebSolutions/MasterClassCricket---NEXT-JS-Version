@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import styles from '../assets/css/SocialStatsSection.module.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React, { useState, useEffect, useRef } from "react";
+import styles from "../assets/css/SocialStatsSection.module.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const SocialStatsSection = () => {
   const [counters, setCounters] = useState({
@@ -10,18 +10,18 @@ const SocialStatsSection = () => {
     facebook: 0,
     tiktok: 0,
     linkedin: 0,
-    youtube: 0
+    youtube: 0,
   });
-  
+
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
   const targetValues = {
-    instagram: { value: 80, suffix: 'K+' },
-    facebook: { value: 22, suffix: 'K+' },
-    tiktok: { value: 21, suffix: 'K+' },
-    linkedin: { value: 150, suffix: '+' },
-    youtube: { value: 500, suffix: '+' }
+    instagram: { value: 80, suffix: "K+" },
+    facebook: { value: 22, suffix: "K+" },
+    tiktok: { value: 21, suffix: "K+" },
+    linkedin: { value: 150, suffix: "+" },
+    youtube: { value: 500, suffix: "+" },
   };
 
   // Format numbers with suffix
@@ -34,17 +34,17 @@ const SocialStatsSection = () => {
     const duration = 2000; // 2 seconds
     const increment = target.value / (duration / 16); // 60fps
     let current = 0;
-    
+
     const timer = setInterval(() => {
       current += increment;
       if (current >= target.value) {
         current = target.value;
         clearInterval(timer);
       }
-      
-      setCounters(prev => ({
+
+      setCounters((prev) => ({
         ...prev,
-        [key]: current
+        [key]: current,
       }));
     }, 16);
   };
@@ -56,7 +56,7 @@ const SocialStatsSection = () => {
         const [entry] = entries;
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
-          
+
           // Start counter animations with delays
           Object.keys(targetValues).forEach((key, index) => {
             setTimeout(() => {
@@ -65,7 +65,7 @@ const SocialStatsSection = () => {
           });
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (sectionRef.current) {
@@ -80,7 +80,11 @@ const SocialStatsSection = () => {
   }, [isVisible]);
 
   return (
-    <section className={styles.socialStatsSection} ref={sectionRef} id="masterclasscommunity">
+    <section
+      className={styles.socialStatsSection}
+      ref={sectionRef}
+      id="masterclasscommunity"
+    >
       {/* Cricket-themed background elements */}
       <div className={styles.cricketFieldPattern}></div>
       <div className={styles.cricketElement1}></div>
@@ -92,14 +96,16 @@ const SocialStatsSection = () => {
       <div className={styles.socialStatsContainer}>
         <h2 className={styles.socialStatsTitle}>MasterClass Community</h2>
         <p className={styles.socialStatsSubtitle}>
-          No matter whether your a coach, parent, student or cricket enthusiast. Our videos are game changing in giving you vital information in a way that's not been done before
+          No matter whether your a coach, parent, student or cricket enthusiast.
+          Our videos are game changing in giving you vital information in a way
+          that's not been done before
         </p>
 
         <div className={styles.socialStatsGrid}>
           {/* Instagram Card */}
-          <a 
-            href="https://www.instagram.com/masterclasscricket" 
-            target="_blank" 
+          <a
+            href="https://www.instagram.com/masterclasscricket"
+            target="_blank"
             rel="noopener noreferrer"
             className={`${styles.socialStatCard} ${styles.instagramCard}`}
           >
@@ -113,9 +119,9 @@ const SocialStatsSection = () => {
           </a>
 
           {/* Facebook Card */}
-          <a 
-            href="https://www.facebook.com/masterclasscricket" 
-            target="_blank" 
+          <a
+            href="https://www.facebook.com/masterclasscricket"
+            target="_blank"
             rel="noopener noreferrer"
             className={`${styles.socialStatCard} ${styles.facebookCard}`}
           >
@@ -129,13 +135,15 @@ const SocialStatsSection = () => {
           </a>
 
           {/* TikTok Card */}
-          <a 
-            href="https://www.tiktok.com/@masterclasscricket?_t=ZN-8uo9sqlW9hO&_r=1" 
-            target="_blank" 
+          <a
+            href="https://www.tiktok.com/@masterclasscricket?_t=ZN-8uo9sqlW9hO&_r=1"
+            target="_blank"
             rel="noopener noreferrer"
             className={`${styles.socialStatCard} ${styles.tiktokCard}`}
           >
-            <div className={`${styles.socialStatIconWrapper} ${styles.tiktokIcon}`}>
+            <div
+              className={`${styles.socialStatIconWrapper} ${styles.tiktokIcon}`}
+            >
               <i className="fab fa-tiktok"></i>
             </div>
             <div className={styles.socialStatNumber}>
@@ -145,9 +153,9 @@ const SocialStatsSection = () => {
           </a>
 
           {/* LinkedIn Card */}
-          <a 
-            href="https://www.linkedin.com/in/uzi-arif-946674203/?originalSubdomain=uk" 
-            target="_blank" 
+          <a
+            href="https://www.linkedin.com/in/uzi-arif-946674203/?originalSubdomain=uk"
+            target="_blank"
             rel="noopener noreferrer"
             className={`${styles.socialStatCard} ${styles.twitterCard}`}
           >
@@ -161,9 +169,9 @@ const SocialStatsSection = () => {
           </a>
 
           {/* YouTube Card */}
-          <a 
-            href="https://youtube.com/@masterclasscricketcoaching.?si=Ovy--9xFpdpV6dlu" 
-            target="_blank" 
+          <a
+            href="https://youtube.com/@masterclasscricketcoaching.?si=Ovy--9xFpdpV6dlu"
+            target="_blank"
             rel="noopener noreferrer"
             className={`${styles.socialStatCard} ${styles.youtubeCard}`}
           >

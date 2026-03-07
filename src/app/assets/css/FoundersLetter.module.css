@@ -1,803 +1,816 @@
 /* Founders Letter Section */
 .foundersLetterSection {
-   margin-top: 5%;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    padding: 80px 0;
-    background-color: #0F0F0F;
-    overflow: hidden;
-    min-height: 80vh;
+  margin-top: 5%;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  padding: 80px 0;
+  background-color: #0f0f0f;
+  overflow: hidden;
+  min-height: 80vh;
+}
+
+/* Cricket Background Elements */
+.cricketBgElements {
+  margin-top: 15%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Cricket Ball Animation */
+.cricketBall {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23c53030'/%3E%3Cpath d='M50,5 C50,5 50,95 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3Cpath d='M50,5 C65,20 65,80 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3Cpath d='M50,5 C35,20 35,80 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E")
+    no-repeat center/contain;
+  opacity: 0.1;
+  will-change: transform;
+  filter: drop-shadow(0 0 10px rgba(197, 48, 48, 0.5));
+}
+
+.cricketBall1 {
+  top: 10%;
+  right: 15%;
+  animation: floatBall 25s ease-in-out infinite;
+}
+
+.cricketBall2 {
+  bottom: 15%;
+  left: 10%;
+  width: 30px;
+  height: 30px;
+  animation: floatBall 20s ease-in-out infinite reverse;
+  animation-delay: -5s;
+}
+
+/* Cricket Stumps Animation */
+.cricketStumps {
+  position: absolute;
+  width: 120px;
+  height: 180px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 180'%3E%3Crect x='10' y='160' width='100' height='10' rx='2' fill='%23eab308'/%3E%3Crect x='25' y='60' width='10' height='100' rx='2' fill='%23f4f4f5'/%3E%3Crect x='55' y='60' width='10' height='100' rx='2' fill='%23f4f4f5'/%3E%3Crect x='85' y='60' width='10' height='100' rx='2' fill='%23f4f4f5'/%3E%3Crect x='20' y='60' width='25' height='5' rx='2' fill='%23eab308'/%3E%3Crect x='50' y='60' width='25' height='5' rx='2' fill='%23eab308'/%3E%3Crect x='80' y='60' width='25' height='5' rx='2' fill='%23eab308'/%3E%3C/svg%3E")
+    no-repeat center/contain;
+  opacity: 0.1;
+  bottom: 0;
+  right: 20%;
+  animation: rotateStumps 30s linear infinite;
+  transform-origin: bottom center;
+}
+
+/* Cricket Bat Animation */
+.cricketBat {
+  position: absolute;
+  width: 50px;
+  height: 200px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 400'%3E%3Cdefs%3E%3ClinearGradient id='batGradient' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23854d0e'/%3E%3Cstop offset='100%25' stop-color='%23a16207'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='43' y='10' width='14' height='100' rx='7' fill='%231e293b'/%3E%3Cpath d='M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z' fill='%23a16207'/%3E%3Cpath d='M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z' fill='url(%23batGradient)'/%3E%3C/svg%3E")
+    no-repeat center/contain;
+  opacity: 0.1;
+  top: 10%;
+  left: 5%;
+  animation: swingBat 15s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* Pattern Background */
+.cricketPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(197, 48, 48, 0.03) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(234, 179, 8, 0.03) 0%,
+      transparent 20%
+    ),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23c53030' stroke-width='0.5' stroke-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Decorative Elements for Letter */
+.letterDecorativeElement {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,5 C75,5 95,25 95,50 C95,75 75,95 50,95 C25,95 5,75 5,50 C5,25 25,5 50,5 Z' stroke='%23eab308' stroke-width='1' fill='none' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.letterDecorativeElement1 {
+  top: 10%;
+  right: 5%;
+  animation: rotate 30s linear infinite;
+}
+
+.letterDecorativeElement2 {
+  bottom: 10%;
+  left: 5%;
+  animation: rotate 30s linear infinite reverse;
+}
+
+/* Letter Container */
+.foundersLetterContainer {
+  /* border: 2px solid yellow; */
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+/* Founder Image Column */
+.founderImageColumn {
+  flex: 1;
+  position: relative;
+  padding: 5%;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.founderName {
+  text-align: left;
+  font-family: "Playfair Display", serif;
+}
+
+.founderDetail i {
+  color: #facc15;
+}
+
+.founderImageWrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  transform: rotateY(-5deg) translateZ(30px);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 5px solid #1a1a1a;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.founderImageWrap:hover {
+  transform: rotateY(0deg) translateZ(50px);
+  box-shadow: 0 40px 70px rgba(234, 179, 8, 0.2);
+  border-color: #facc15;
+}
+
+.founderImageContainer {
+  position: relative;
+  padding-top: 125%;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.founderImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.founderImageWrap:hover .founderImage {
+  transform: scale(1.05);
+}
+
+/* Decorative cricket elements behind image */
+.founderImageCricketElements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.cricketElement {
+  position: absolute;
+  opacity: 0.15;
+  filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.3));
+}
+
+.cricketElementBat {
+  width: 80px;
+  height: 300px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 400'%3E%3Cdefs%3E%3ClinearGradient id='batGradient' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23eab308'/%3E%3Cstop offset='100%25' stop-color='%23d97706'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='43' y='10' width='14' height='100' rx='7' fill='%231e293b'/%3E%3Cpath d='M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z' fill='%23a16207'/%3E%3Cpath d='M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z' fill='url(%23batGradient)'/%3E%3C/svg%3E")
+    no-repeat center/contain;
+  top: -50px;
+  left: -30px;
+  transform: rotate(-30deg);
+}
+
+.cricketElementBall {
+  width: 60px;
+  height: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23c53030'/%3E%3Cpath d='M50,5 C50,5 50,95 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3Cpath d='M50,5 C65,20 65,80 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3Cpath d='M50,5 C35,20 35,80 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E")
+    no-repeat center/contain;
+  bottom: -20px;
+  right: -20px;
+}
+
+/* Letter Coach Section */
+.lettercoach {
+  margin-top: 5%;
+  text-align: center;
+  color: #facc15;
+  font-family: "Playfair Display", serif;
+  margin-right: 15%;
+  width: 100%;
+}
+
+.lettercoach h2 {
+  font-size: 1.5rem;
+  display: block;
+}
+
+/* Main Card Styles */
+.founderInfoCard,
+.letterContentColumn {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+  min-width: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Inside the Card */
+.founderDetails {
+  margin-top: -20px;
+}
+
+/* Founder Details (All Rows) */
+.founderDetail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Icon Styles */
+.founderDetail i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #facc15;
+}
+
+/* Text Styles */
+.founderDetail p {
+  margin: 0;
+  font-size: 16px;
+  color: #f0e5e5;
+}
+
+/* Founder Name Heading */
+.founderName {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Letter Content Column */
+.letterContentColumn {
+  flex: 1.5;
+  min-width: 50%;
+  position: relative;
+  padding: 5%;
+}
+
+/* Letter content scrollable area */
+.letterContentScroll {
+  position: relative;
+  height: 700px;
+  overflow-y: auto;
+  background: rgba(26, 26, 26, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.letterContentScroll:hover {
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(234, 179, 8, 0.1);
+}
+
+/* Custom scrollbar */
+.letterContentScroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.letterContentScroll::-webkit-scrollbar-track {
+  background: rgba(26, 26, 26, 0.5);
+  border-radius: 10px;
+}
+
+.letterContentScroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #c53030, #9b2c2c);
+  border-radius: 10px;
+}
+
+.letterContentScroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #facc15, #d97706);
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid #facc15;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.scrollIndicator::before {
+  content: "";
+  width: 6px;
+  height: 10px;
+  background: #facc15;
+  border-radius: 3px;
+  position: absolute;
+  top: 8px;
+  animation: scrollDown 2s infinite;
+}
+
+.letterContentScroll:hover .scrollIndicator {
+  opacity: 0;
+}
+
+/* Letter Text Styling */
+.letterText {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #e5e5e5;
+  font-weight: 300;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.letterText p {
+  margin-bottom: 20px;
+}
+
+.letterText strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.letterText em {
+  color: #facc15;
+  font-style: italic;
+}
+
+/* Stylized cricket quote */
+.cricketQuote {
+  position: relative;
+  background: rgba(26, 26, 26, 0.5);
+  border-left: 4px solid #facc15;
+  padding: 20px 25px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #e5e5e5;
+  font-size: 1.1rem;
+  border-radius: 0 10px 10px 0;
+}
+
+.cricketQuote::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 60px;
+  color: #facc15;
+  font-family: "Playfair Display", serif;
+  opacity: 0.5;
+}
+
+/* Mission and Vision sections */
+.missionVision {
+  margin-top: 40px;
+}
+
+.missionSection,
+.visionSection {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(15, 15, 15, 0.6);
+  border-radius: 10px;
+  border-left: 3px solid #facc15;
+}
+
+.missionSection strong,
+.visionSection strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #facc15;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+/* Animations */
+@keyframes floatBall {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
   }
-  
-  /* Cricket Background Elements */
-  .cricketBgElements {
-    margin-top: 15%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
+  25% {
+    transform: translate(50px, 30px) rotate(90deg);
   }
-  
-  /* Cricket Ball Animation */
-  .cricketBall {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23c53030'/%3E%3Cpath d='M50,5 C50,5 50,95 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3Cpath d='M50,5 C65,20 65,80 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3Cpath d='M50,5 C35,20 35,80 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat center/contain;
-    opacity: 0.1;
-    will-change: transform;
-    filter: drop-shadow(0 0 10px rgba(197, 48, 48, 0.5));
+  50% {
+    transform: translate(100px, -20px) rotate(180deg);
   }
-  
-  .cricketBall1 {
-    top: 10%;
-    right: 15%;
-    animation: floatBall 25s ease-in-out infinite;
+  75% {
+    transform: translate(50px, -50px) rotate(270deg);
   }
-  
-  .cricketBall2 {
-    bottom: 15%;
-    left: 10%;
-    width: 30px;
-    height: 30px;
-    animation: floatBall 20s ease-in-out infinite reverse;
-    animation-delay: -5s;
+}
+
+@keyframes swingBat {
+  0%,
+  100% {
+    transform: rotate(0deg);
   }
-  
-  /* Cricket Stumps Animation */
-  .cricketStumps {
-    position: absolute;
-    width: 120px;
-    height: 180px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 180'%3E%3Crect x='10' y='160' width='100' height='10' rx='2' fill='%23eab308'/%3E%3Crect x='25' y='60' width='10' height='100' rx='2' fill='%23f4f4f5'/%3E%3Crect x='55' y='60' width='10' height='100' rx='2' fill='%23f4f4f5'/%3E%3Crect x='85' y='60' width='10' height='100' rx='2' fill='%23f4f4f5'/%3E%3Crect x='20' y='60' width='25' height='5' rx='2' fill='%23eab308'/%3E%3Crect x='50' y='60' width='25' height='5' rx='2' fill='%23eab308'/%3E%3Crect x='80' y='60' width='25' height='5' rx='2' fill='%23eab308'/%3E%3C/svg%3E") no-repeat center/contain;
-    opacity: 0.1;
-    bottom: 0;
-    right: 20%;
-    animation: rotateStumps 30s linear infinite;
-    transform-origin: bottom center;
+  25% {
+    transform: rotate(5deg);
   }
-  
-  /* Cricket Bat Animation */
-  .cricketBat {
-    position: absolute;
-    width: 50px;
-    height: 200px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 400'%3E%3Cdefs%3E%3ClinearGradient id='batGradient' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23854d0e'/%3E%3Cstop offset='100%25' stop-color='%23a16207'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='43' y='10' width='14' height='100' rx='7' fill='%231e293b'/%3E%3Cpath d='M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z' fill='%23a16207'/%3E%3Cpath d='M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z' fill='url(%23batGradient)'/%3E%3C/svg%3E") no-repeat center/contain;
-    opacity: 0.1;
-    top: 10%;
-    left: 5%;
-    animation: swingBat 15s ease-in-out infinite;
-    transform-origin: top center;
+  75% {
+    transform: rotate(-5deg);
   }
-  
-  /* Pattern Background */
-  .cricketPattern {
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-      radial-gradient(circle at 10% 10%, rgba(197, 48, 48, 0.03) 0%, transparent 20%),
-      radial-gradient(circle at 90% 90%, rgba(234, 179, 8, 0.03) 0%, transparent 20%),
-      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23c53030' stroke-width='0.5' stroke-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.4;
-    z-index: 0;
+}
+
+@keyframes rotateStumps {
+  from {
+    transform: rotate(0deg);
   }
-  
-  /* Decorative Elements for Letter */
-  .letterDecorativeElement {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,5 C75,5 95,25 95,50 C95,75 75,95 50,95 C25,95 5,75 5,50 C5,25 25,5 50,5 Z' stroke='%23eab308' stroke-width='1' fill='none' stroke-dasharray='5,5'/%3E%3C/svg%3E");
-    opacity: 0.2;
-    z-index: 1;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .letterDecorativeElement1 {
-    top: 10%;
-    right: 5%;
-    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .letterDecorativeElement2 {
-    bottom: 10%;
-    left: 5%;
-    animation: rotate 30s linear infinite reverse;
+  to {
+    transform: rotate(360deg);
   }
-  
-  /* Letter Container */
-  .foundersLetterContainer {
-   
-    /* border: 2px solid yellow; */
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 30px;
-    z-index: 2;
-    padding: 0 20px;
-  }
-  
-  /* Founder Image Column */
-  .founderImageColumn {
-    flex: 1;
-    position: relative;
-    padding: 5%;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-  
-  .founderName {
-    text-align: left;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .founderDetail i {
-    color: #facc15;
-  }
-  
-  .founderImageWrap {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-    transform: rotateY(-5deg) translateZ(30px);
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    border: 5px solid #1a1a1a;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .founderImageWrap:hover {
-    transform: rotateY(0deg) translateZ(50px);
-    box-shadow: 0 40px 70px rgba(234, 179, 8, 0.2);
-    border-color: #facc15;
-  }
-  
-  .founderImageContainer {
-    position: relative;
-    padding-top: 125%;
-    overflow: hidden;
-    background: #1a1a1a;
-  }
-  
-  .founderImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  
-  .founderImageWrap:hover .founderImage {
-    transform: scale(1.05);
-  }
-  
-  /* Decorative cricket elements behind image */
-  .founderImageCricketElements {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  
-  .cricketElement {
-    position: absolute;
-    opacity: 0.15;
-    filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.3));
-  }
-  
-  .cricketElementBat {
-    width: 80px;
-    height: 300px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 400'%3E%3Cdefs%3E%3ClinearGradient id='batGradient' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23eab308'/%3E%3Cstop offset='100%25' stop-color='%23d97706'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='43' y='10' width='14' height='100' rx='7' fill='%231e293b'/%3E%3Cpath d='M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z' fill='%23a16207'/%3E%3Cpath d='M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z' fill='url(%23batGradient)'/%3E%3C/svg%3E") no-repeat center/contain;
-    top: -50px;
-    left: -30px;
-    transform: rotate(-30deg);
-  }
-  
-  .cricketElementBall {
-    width: 60px;
-    height: 60px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23c53030'/%3E%3Cpath d='M50,5 C50,5 50,95 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3Cpath d='M50,5 C65,20 65,80 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3Cpath d='M50,5 C35,20 35,80 50,95' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat center/contain;
-    bottom: -20px;
-    right: -20px;
-  }
-  
-  /* Letter Coach Section */
-  .lettercoach {
-    margin-top: 5%;
-    text-align: center;
-    color: #facc15;
-    font-family: 'Playfair Display', serif;
-    margin-right: 15%;
-    width: 100%;
-  }
-  
-  .lettercoach h2 {
-    font-size: 1.5rem;
-    display: block;
-  }
-  
-  /* Main Card Styles */
-  .founderInfoCard,
-  .letterContentColumn {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border-radius: 12px;
-    padding: 25px;
-    width: 100%;
-    min-width: 300px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Inside the Card */
-  .founderDetails {
-    margin-top: -20px;
-  }
-  
-  /* Founder Details (All Rows) */
-  .founderDetail {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-  
-  /* Icon Styles */
-  .founderDetail i {
-    font-size: 20px;
-    margin-right: 8px;
-    color: #facc15;
-  }
-  
-  /* Text Styles */
-  .founderDetail p {
-    margin: 0;
-    font-size: 16px;
-    color: #f0e5e5;
-  }
-  
-  /* Founder Name Heading */
-  .founderName {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  /* Letter Content Column */
-  .letterContentColumn {
-    flex: 1.5;
-    min-width: 50%;
-    position: relative;
-    padding: 5%;
-  }
-  
-  /* Letter content scrollable area */
-  .letterContentScroll {
-    position: relative;
-    height: 700px;
-    overflow-y: auto;
-    background: rgba(26, 26, 26, 0.5);
-    backdrop-filter: blur(10px);
-    padding: 30px 35px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .letterContentScroll:hover {
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 20px rgba(234, 179, 8, 0.1);
-  }
-  
-  /* Custom scrollbar */
-  .letterContentScroll::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  .letterContentScroll::-webkit-scrollbar-track {
-    background: rgba(26, 26, 26, 0.5);
-    border-radius: 10px;
-  }
-  
-  .letterContentScroll::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #c53030, #9B2C2C);
-    border-radius: 10px;
-  }
-  
-  .letterContentScroll::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #facc15, #d97706);
-  }
-  
-  /* Scroll indicator */
-  .scrollIndicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 50px;
-    border: 2px solid #facc15;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-  }
-  
-  .scrollIndicator::before {
-    content: '';
-    width: 6px;
-    height: 10px;
-    background: #facc15;
-    border-radius: 3px;
-    position: absolute;
-    top: 8px;
-    animation: scrollDown 2s infinite;
-  }
-  
-  .letterContentScroll:hover .scrollIndicator {
-    opacity: 0;
-  }
-  
-  /* Letter Text Styling */
-  .letterText {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #e5e5e5;
-    font-weight: 300;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-  }
-  
-  .letterText p {
-    margin-bottom: 20px;
-  }
-  
-  .letterText strong {
-    color: #ffffff;
-    font-weight: 500;
-  }
-  
-  .letterText em {
-    color: #facc15;
-    font-style: italic;
-  }
-  
-  /* Stylized cricket quote */
-  .cricketQuote {
-    position: relative;
-    background: rgba(26, 26, 26, 0.5);
-    border-left: 4px solid #facc15;
-    padding: 20px 25px;
-    margin: 30px 0;
-    font-style: italic;
-    color: #e5e5e5;
-    font-size: 1.1rem;
-    border-radius: 0 10px 10px 0;
-  }
-  
-  .cricketQuote::before {
-    content: '"';
-    position: absolute;
-    top: -20px;
-    left: 10px;
-    font-size: 60px;
-    color: #facc15;
-    font-family: 'Playfair Display', serif;
-    opacity: 0.5;
-  }
-  
-  /* Mission and Vision sections */
-  .missionVision {
-    margin-top: 40px;
-  }
-  
-  .missionSection,
-  .visionSection {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: rgba(15, 15, 15, 0.6);
-    border-radius: 10px;
-    border-left: 3px solid #facc15;
-  }
-  
-  .missionSection strong,
-  .visionSection strong {
-    display: block;
-    font-size: 1.2rem;
-    color: #facc15;
-    margin-bottom: 10px;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  /* Animations */
-  @keyframes floatBall {
-    0%,
-    100% {
-      transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-      transform: translate(50px, 30px) rotate(90deg);
-    }
-    50% {
-      transform: translate(100px, -20px) rotate(180deg);
-    }
-    75% {
-      transform: translate(50px, -50px) rotate(270deg);
-    }
-  }
-  
-  @keyframes swingBat {
-    0%,
-    100% {
-      transform: rotate(0deg);
-    }
-    25% {
-      transform: rotate(5deg);
-    }
-    75% {
-      transform: rotate(-5deg);
-    }
-  }
-  
-  @keyframes rotateStumps {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes scrollDown {
-    0% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    50% {
-      opacity: 0.3;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Fade-in animation */
-  .fadeIn {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  
-  .fadeIn.animated {
+}
+
+@keyframes scrollDown {
+  0% {
     opacity: 1;
     transform: translateY(0);
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .foundersLetterSection {
-      padding: 40px 0;
-    }
-  
-    .foundersLetterContainer {
-       
+  50% {
+    opacity: 0.3;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      flex-direction: column;
-      gap: 20px;
-      padding: 0 15px;
-    }
-  
-    .founderImageColumn {
-        /* border: 1px solid #9B2C2C; */
-        align-items: center;
-      padding: 15%;
-      margin-top: 10%;
-      order: 1;
-    }
-  
-    .letterContentColumn {
-      padding: 2%;
-      order: 2;
-    }
-  
-    .founderImageWrap {
-      max-width: 280px;
-      transform: none;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-  
-    .founderImageWrap:hover {
-      transform: scale(1.02);
-    }
-  
-    .lettercoach {
-      margin-top: 20px;
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  
-    .lettercoach h2 {
-      font-size: 1.2rem;
-      line-height: 1.4;
-      margin-bottom: 15px;
-    }
-  
-    .founderInfoCard {
-      padding: 20px;
-      margin-top: 20px;
-    }
-  
-    .founderName {
-      font-size: 22px;
-      text-align: center;
-    }
-  
-    .founderDetail {
-      text-align: left;
-      margin-bottom: 12px;
-      align-items: flex-start;
-    }
-  
-    .founderDetail p {
-      font-size: 14px;
-      line-height: 1.5;
-    }
-  
-    .founderDetail i {
-      font-size: 18px;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-  
-    .letterContentScroll {
-      height: 500px;
-      padding: 20px 25px;
-    }
-  
-    .letterText {
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-  
-    .letterText p {
-      margin-bottom: 18px;
-    }
-  
-    .cricketQuote {
-      padding: 15px 20px;
-      margin: 25px 0;
-      font-size: 1rem;
-    }
-  
-    .cricketQuote::before {
-      font-size: 50px;
-      top: -15px;
-    }
-  
-    .missionSection,
-    .visionSection {
-      padding: 18px;
-      margin-bottom: 25px;
-    }
-  
-    .missionSection strong,
-    .visionSection strong {
-      font-size: 1.1rem;
-    }
+/* Fade-in animation */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fadeIn.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .foundersLetterSection {
+    padding: 40px 0;
   }
-  
-  @media (max-width: 480px) {
-    .foundersLetterSection {
-      padding: 30px 0;
-    }
-  
-    .foundersLetterContainer {
-      padding: 0 10px;
-      gap: 15px;
-    }
-  
-    .founderImageColumn {
-      padding: 1%;
-    }
-  
-    .founderImageWrap {
-      max-width: 250px;
-    }
-  
-    .lettercoach h2 {
-      font-size: 1.1rem;
-      line-height: 1.3;
-      padding: 0 10px;
-    }
-  
-    .founderInfoCard {
-      padding: 15px;
-    }
-  
-    .founderName {
-      font-size: 20px;
-    }
-  
-    .founderDetail {
-      margin-bottom: 10px;
-      gap: 8px;
-    }
-  
-    .founderDetail p {
-      font-size: 13px;
-      line-height: 1.4;
-    }
-  
-    .founderDetail i {
-      font-size: 16px;
-      margin-right: 6px;
-    }
-  
-    .letterContentColumn {
-      padding: 1%;
-    }
-  
-    .letterContentScroll {
-      height: 400px;
-      padding: 15px 20px;
-    }
-  
-    .letterText {
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-  
-    .letterText p {
-      margin-bottom: 15px;
-    }
-  
-    .cricketQuote {
-      padding: 12px 15px;
-      margin: 20px 0;
-      font-size: 0.9rem;
-    }
-  
-    .cricketQuote::before {
-      font-size: 40px;
-      top: -12px;
-      left: 8px;
-    }
-  
-    .missionSection,
-    .visionSection {
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-  
-    .missionSection strong,
-    .visionSection strong {
-      font-size: 1rem;
-    }
+
+  .foundersLetterContainer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
   }
-  
-  @media (max-width: 360px) {
-    .foundersLetterSection {
-      padding: 25px 0;
-    }
-  
-    .foundersLetterContainer {
-      padding: 0 8px;
-      gap: 12px;
-    }
-  
-    .founderImageWrap {
-      max-width: 220px;
-    }
-  
-    .lettercoach {
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-  
-    .lettercoach h2 {
-      font-size: 1rem;
-      line-height: 1.25;
-      padding: 0 5px;
-    }
-  
-    .founderInfoCard {
-      padding: 12px;
-    }
-  
-    .founderName {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-  
-    .founderDetail {
-      margin-bottom: 8px;
-      gap: 6px;
-    }
-  
-    .founderDetail p {
-      font-size: 12px;
-      line-height: 1.3;
-    }
-  
-    .founderDetail i {
-      font-size: 14px;
-      margin-right: 5px;
-    }
-  
-    .letterContentScroll {
-      height: 350px;
-      padding: 12px 15px;
-    }
-  
-    .letterText {
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
-  
-    .letterText p {
-      margin-bottom: 12px;
-    }
-  
-    .cricketQuote {
-      padding: 10px 12px;
-      margin: 15px 0;
-      font-size: 0.85rem;
-    }
-  
-    .cricketQuote::before {
-      font-size: 35px;
-      top: -10px;
-      left: 5px;
-    }
-  
-    .missionSection,
-    .visionSection {
-      padding: 12px;
-      margin-bottom: 15px;
-    }
-  
-    .missionSection strong,
-    .visionSection strong {
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-    }
-  
-    .scrollIndicator {
-      width: 25px;
-      height: 40px;
-    }
-  
-    .scrollIndicator::before {
-      width: 5px;
-      height: 8px;
-      top: 6px;
-    }
+
+  .founderImageColumn {
+    /* border: 1px solid #9B2C2C; */
+    align-items: center;
+    padding: 15%;
+    margin-top: 10%;
+    order: 1;
   }
+
+  .letterContentColumn {
+    padding: 2%;
+    order: 2;
+  }
+
+  .founderImageWrap {
+    max-width: 280px;
+    transform: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .founderImageWrap:hover {
+    transform: scale(1.02);
+  }
+
+  .lettercoach {
+    margin-top: 20px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .lettercoach h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .founderInfoCard {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .founderName {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .founderDetail {
+    text-align: left;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .founderDetail p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .founderDetail i {
+    font-size: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .letterContentScroll {
+    height: 500px;
+    padding: 20px 25px;
+  }
+
+  .letterText {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .letterText p {
+    margin-bottom: 18px;
+  }
+
+  .cricketQuote {
+    padding: 15px 20px;
+    margin: 25px 0;
+    font-size: 1rem;
+  }
+
+  .cricketQuote::before {
+    font-size: 50px;
+    top: -15px;
+  }
+
+  .missionSection,
+  .visionSection {
+    padding: 18px;
+    margin-bottom: 25px;
+  }
+
+  .missionSection strong,
+  .visionSection strong {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .foundersLetterSection {
+    padding: 30px 0;
+  }
+
+  .foundersLetterContainer {
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .founderImageColumn {
+    padding: 1%;
+  }
+
+  .founderImageWrap {
+    max-width: 250px;
+  }
+
+  .lettercoach h2 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    padding: 0 10px;
+  }
+
+  .founderInfoCard {
+    padding: 15px;
+  }
+
+  .founderName {
+    font-size: 20px;
+  }
+
+  .founderDetail {
+    margin-bottom: 10px;
+    gap: 8px;
+  }
+
+  .founderDetail p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .founderDetail i {
+    font-size: 16px;
+    margin-right: 6px;
+  }
+
+  .letterContentColumn {
+    padding: 1%;
+  }
+
+  .letterContentScroll {
+    height: 400px;
+    padding: 15px 20px;
+  }
+
+  .letterText {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .letterText p {
+    margin-bottom: 15px;
+  }
+
+  .cricketQuote {
+    padding: 12px 15px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+  }
+
+  .cricketQuote::before {
+    font-size: 40px;
+    top: -12px;
+    left: 8px;
+  }
+
+  .missionSection,
+  .visionSection {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .missionSection strong,
+  .visionSection strong {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .foundersLetterSection {
+    padding: 25px 0;
+  }
+
+  .foundersLetterContainer {
+    padding: 0 8px;
+    gap: 12px;
+  }
+
+  .founderImageWrap {
+    max-width: 220px;
+  }
+
+  .lettercoach {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .lettercoach h2 {
+    font-size: 1rem;
+    line-height: 1.25;
+    padding: 0 5px;
+  }
+
+  .founderInfoCard {
+    padding: 12px;
+  }
+
+  .founderName {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .founderDetail {
+    margin-bottom: 8px;
+    gap: 6px;
+  }
+
+  .founderDetail p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .founderDetail i {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .letterContentScroll {
+    height: 350px;
+    padding: 12px 15px;
+  }
+
+  .letterText {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .letterText p {
+    margin-bottom: 12px;
+  }
+
+  .cricketQuote {
+    padding: 10px 12px;
+    margin: 15px 0;
+    font-size: 0.85rem;
+  }
+
+  .cricketQuote::before {
+    font-size: 35px;
+    top: -10px;
+    left: 5px;
+  }
+
+  .missionSection,
+  .visionSection {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .missionSection strong,
+  .visionSection strong {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .scrollIndicator {
+    width: 25px;
+    height: 40px;
+  }
+
+  .scrollIndicator::before {
+    width: 5px;
+    height: 8px;
+    top: 6px;
+  }
+}

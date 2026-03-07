@@ -1,17 +1,17 @@
-'use client';
-import { useRef } from 'react';
-import styles from '../assets/css/Testimonials.module.css';
+"use client";
+import { useRef } from "react";
+import styles from "../assets/css/Testimonials.module.css";
 
 const Testimonials = () => {
   const rowRefs = [useRef(null), useRef(null)];
 
   const cards = Array(8).fill({
-    name: 'Masterclass Cricket Academy',
-    videoSrc: '/v2.mp4', // your video inside public/
+    name: "Masterclass Cricket Academy",
+    videoSrc: "/v2.mp4", // your video inside public/
   });
 
   const handleMouseEnter = (e, rowIndex) => {
-    const video = e.currentTarget.querySelector('video');
+    const video = e.currentTarget.querySelector("video");
     const row = rowRefs[rowIndex].current;
     if (video && row) {
       video.muted = false;
@@ -22,7 +22,7 @@ const Testimonials = () => {
   };
 
   const handleMouseLeave = (e, rowIndex) => {
-    const video = e.currentTarget.querySelector('video');
+    const video = e.currentTarget.querySelector("video");
     const row = rowRefs[rowIndex].current;
     if (video && row) {
       video.muted = true;
@@ -38,12 +38,19 @@ const Testimonials = () => {
       <section className={styles.videoTestimonialsSection}>
         <div className={styles.testimonialsHeader}>
           <h2>🎥 Video Testimonials</h2>
-          <p>Hover over a video to pause scrolling and hear real voices from Masterclass Cricket Academy.</p>
+          <p>
+            Hover over a video to pause scrolling and hear real voices from
+            Masterclass Cricket Academy.
+          </p>
         </div>
 
         <div className={styles.videoRowsContainer}>
           {[...Array(2)].map((_, rowIndex) => (
-            <div key={rowIndex} ref={rowRefs[rowIndex]} className={styles.videoRow}>
+            <div
+              key={rowIndex}
+              ref={rowRefs[rowIndex]}
+              className={styles.videoRow}
+            >
               {cards.concat(cards).map((card, i) => (
                 <div
                   key={i}

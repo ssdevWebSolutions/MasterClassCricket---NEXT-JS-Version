@@ -1,85 +1,73 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from '../assets/css/Footer.module.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
-
-
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../assets/css/Footer.module.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer = () => {
-    const servicesData = [
+  const servicesData = [
     {
       id: 1,
-      name: '1-2-1 Coaching',
-      description:
-        'Tailored Training for Every Cricketer',
-      link: '/services/one-on-one',
+      name: "1-2-1 Coaching",
+      description: "Tailored Training for Every Cricketer",
+      link: "/services/one-on-one",
     },
     {
       id: 2,
-      name: 'Small Group Sessions',
-      description:
-        'Train with Peers, Excel Together',
-      link: '/services/group-sessions',
+      name: "Small Group Sessions",
+      description: "Train with Peers, Excel Together",
+      link: "/services/group-sessions",
     },
     {
       id: 3,
-      name: 'Masterclass Academy Sessions',
-      description:
-        'Structured Training for Age-Group Development',
-      link: '/services/holiday-camps',
+      name: "Masterclass Academy Sessions",
+      description: "Structured Training for Age-Group Development",
+      link: "/services/holiday-camps",
     },
     {
       id: 4,
-      name: 'Elite Performance Clinics',
-      description:
-        'For Cricketers Who Aspire to Be the Best',
-      link: '/services/holiday-camps',
+      name: "Elite Performance Clinics",
+      description: "For Cricketers Who Aspire to Be the Best",
+      link: "/services/holiday-camps",
     },
     {
       id: 5,
-      name: 'Tours for Clubs and Members',
-      description:
-        'Experience Cricket in Different Conditions',
-      link: '/services/holiday-camps',
+      name: "Tours for Clubs and Members",
+      description: "Experience Cricket in Different Conditions",
+      link: "/services/holiday-camps",
     },
     {
       id: 6,
-      name: 'Corporate Team-Building Events',
-      description:
-        'Cricket as a Tool for Leadership & Teamwork',
-      link: '/services/holiday-camps',
+      name: "Corporate Team-Building Events",
+      description: "Cricket as a Tool for Leadership & Teamwork",
+      link: "/services/holiday-camps",
     },
     {
       id: 7,
-      name: 'Online Bowling Assessments',
-      description:
-        'Get Expert Feedback—Anytime, Anywhere',
-      link: '/services/holiday-camps',
+      name: "Online Bowling Assessments",
+      description: "Get Expert Feedback—Anytime, Anywhere",
+      link: "/services/holiday-camps",
     },
     {
       id: 8,
-      name: 'School Coaching Programmes',
+      name: "School Coaching Programmes",
       description:
-        'Bringing expert coaching to schools through teacher training and high-quality student masterclasses.',
-      link: '/services/holiday-camps',
+        "Bringing expert coaching to schools through teacher training and high-quality student masterclasses.",
+      link: "/services/holiday-camps",
     },
     {
       id: 9,
-      name: 'Online Batting Assessments',
-      description:
-        'Analyse, Adjust, Improve',
-      link: '/services/holiday-camps',
+      name: "Online Batting Assessments",
+      description: "Analyse, Adjust, Improve",
+      link: "/services/holiday-camps",
     },
     {
       id: 10,
-      name: 'Mental Mind Mapping Course',
-      description:
-        'Masterclass Mind Mapping',
-      link: '/services/holiday-camps',
+      name: "Mental Mind Mapping Course",
+      description: "Masterclass Mind Mapping",
+      link: "/services/holiday-camps",
     },
   ];
 
@@ -89,7 +77,6 @@ const Footer = () => {
   const handleServiceClick = (service) => setSelectedService(service);
   const handleBackClick = () => setSelectedService(null);
 
-  
   return (
     <>
       {/* Floating WhatsApp Button */}
@@ -104,7 +91,7 @@ const Footer = () => {
       </a>
 
       {/* Booking Chatbot Floating Button */}
-          {/* Floating Chatbot Button */}
+      {/* Floating Chatbot Button */}
       {/* <button
         className={`${styles.chatbotButton} ${chatOpen ? styles.hide : ''}`}
         onClick={() => setChatOpen(true)}
@@ -117,7 +104,10 @@ const Footer = () => {
         <div className={styles.chatWindow}>
           <div className={styles.chatHeader}>
             <span>Bookings Chatbot</span>
-            <button onClick={() => setChatOpen(false)} className={styles.closeBtn}>
+            <button
+              onClick={() => setChatOpen(false)}
+              className={styles.closeBtn}
+            >
               ✖
             </button>
           </div>
@@ -147,7 +137,8 @@ const Footer = () => {
                 </p>
                 <p className={styles.botText}>{selectedService.description}</p>
                 <p className={styles.botText}>
-                  👉 <a href={selectedService.link}>Click here</a> to learn more.
+                  👉 <a href={selectedService.link}>Click here</a> to learn
+                  more.
                 </p>
               </>
             )}
@@ -171,7 +162,6 @@ const Footer = () => {
         </div>
       )}
 
-     
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.row}>
@@ -187,7 +177,10 @@ const Footer = () => {
                 />
               </Link>
               <p className={styles.aboutText}>
-                There's a reason Masterclass Cricket has gone from strength to strength over the past 10 years—we are committed to coaching excellence. Once students get a taste of our training, they keep coming back for more.
+                There's a reason Masterclass Cricket has gone from strength to
+                strength over the past 10 years—we are committed to coaching
+                excellence. Once students get a taste of our training, they keep
+                coming back for more.
               </p>
               <div className={styles.socialLinks}>
                 <a
@@ -243,19 +236,29 @@ const Footer = () => {
               <h4 className={styles.columnTitle}>Quick Links</h4>
               <ul className={styles.linksList}>
                 <li className={styles.linkItem}>
-                  <Link href="/" className={styles.link}>Home</Link>
+                  <Link href="/" className={styles.link}>
+                    Home
+                  </Link>
                 </li>
                 <li className={styles.linkItem}>
-                  <Link href="/about" className={styles.link}>About Us</Link>
+                  <Link href="/about" className={styles.link}>
+                    About Us
+                  </Link>
                 </li>
                 <li className={styles.linkItem}>
-                  <Link href="/coach" className={styles.link}>Meet The Owner</Link>
+                  <Link href="/coach" className={styles.link}>
+                    Meet The Owner
+                  </Link>
                 </li>
                 <li className={styles.linkItem}>
-                  <Link href="/testimonials" className={styles.link}>Testimonials</Link>
+                  <Link href="/testimonials" className={styles.link}>
+                    Testimonials
+                  </Link>
                 </li>
                 <li className={styles.linkItem}>
-                  <Link href="/contact" className={styles.link}>Contact Us</Link>
+                  <Link href="/contact" className={styles.link}>
+                    Contact Us
+                  </Link>
                 </li>
                 <li className="mb-2">
                   <a
@@ -268,7 +271,6 @@ const Footer = () => {
                     <span className={styles.arrow}>↑</span>
                   </a>
                 </li>
-
               </ul>
             </div>
 
@@ -296,7 +298,10 @@ const Footer = () => {
               <h4 className={styles.columnTitle}>Subscribe YouTube</h4>
               <div className={styles.youtubeSubscribe}>
                 <p className={styles.subscribeText}>
-                  Our content drops on YouTube first, including both long-form and short-form videos. Subscribe and turn on notifications to stay ahead and access exclusive behind-the-scenes content and podcasts. Don't miss out!
+                  Our content drops on YouTube first, including both long-form
+                  and short-form videos. Subscribe and turn on notifications to
+                  stay ahead and access exclusive behind-the-scenes content and
+                  podcasts. Don't miss out!
                 </p>
                 <a
                   href="https://youtube.com/@masterclasscricketcoaching.?si=Ovy--9xFpdpV6dlu"

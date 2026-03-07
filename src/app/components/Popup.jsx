@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation'; // ✅ Import the Next.js App Router
-import styles from '../assets/css/Popup.module.css';
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // ✅ Import the Next.js App Router
+import styles from "../assets/css/Popup.module.css";
 
 const Popup = ({
   isVisible = true,
   onClose,
   showAfterDelay = true,
   delay = 3000,
-  imageUrl = '/Half_Camp_Flyer.png',
-  imageAlt = '2026 Masterclass Elite Cricket Academy Flyer',
-  bookingUrl = 'https://masterclass-cricket.classforkids.io/',
-  buttonText = 'Read MORE',
+  imageUrl = "/Half_Camp_Flyer.png",
+  imageAlt = "2026 Masterclass Elite Cricket Academy Flyer",
+  bookingUrl = "https://masterclass-cricket.classforkids.io/",
+  buttonText = "Read MORE",
 }) => {
   const router = useRouter(); // ✅ Initialize router here
 
@@ -47,17 +47,17 @@ const Popup = ({
   // Handle escape key
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === 'Escape' && showPopup) handleClose();
+      if (e.key === "Escape" && showPopup) handleClose();
     };
 
     if (showPopup) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
     };
   }, [showPopup]);
 
@@ -71,31 +71,45 @@ const Popup = ({
   return (
     <>
       <div
-        className={`${styles.popupOverlay} ${isClosing ? styles.hidden : ''}`}
+        className={`${styles.popupOverlay} ${isClosing ? styles.hidden : ""}`}
         onClick={handleBackdropClick}
       >
         <div className={styles.popupBox}>
-          <button className={styles.closeBtn} onClick={handleClose} aria-label="Close popup">
+          <button
+            className={styles.closeBtn}
+            onClick={handleClose}
+            aria-label="Close popup"
+          >
             ×
           </button>
 
           {/* Flyer Image */}
-          <img src={imageUrl} alt={imageAlt} className={styles.popupImg} loading="lazy" />
+          <img
+            src={imageUrl}
+            alt={imageAlt}
+            className={styles.popupImg}
+            loading="lazy"
+          />
 
           {/* ✅ Redirect Button */}
           <button
             className={styles.redirectBtn}
-            onClick={() => router.push('/masterclass_elite_cricket_academy')} // 👈 your navbar route
+            onClick={() => router.push("/masterclass_elite_cricket_academy")} // 👈 your navbar route
           >
             {buttonText}
           </button>
 
           <button
-  className={`${styles.redirectBtn} ${styles.bookNowPopupBtn}`} // new subtle style
-  onClick={() => window.open('https://masterclass-cricket.classforkids.io/', '_blank')}
->
-  Book Now
-</button>
+            className={`${styles.redirectBtn} ${styles.bookNowPopupBtn}`} // new subtle style
+            onClick={() =>
+              window.open(
+                "https://masterclass-cricket.classforkids.io/",
+                "_blank",
+              )
+            }
+          >
+            Book Now
+          </button>
         </div>
       </div>
 
@@ -108,7 +122,10 @@ const Popup = ({
           }}
         >
           <div className={styles.modalContent}>
-            <button className={styles.closeModal} onClick={() => setShowModal(false)}>
+            <button
+              className={styles.closeModal}
+              onClick={() => setShowModal(false)}
+            >
               ✕
             </button>
 
@@ -116,70 +133,76 @@ const Popup = ({
             <div className={styles.termsBox}>
               <h3>Masterclass Elite Cricket Academy 2026</h3>
               <p>
-                The Masterclass Elite Cricket Academy is where the region's most promising young
-                cricketers are tested, challenged and developed to reach professional standards.
+                The Masterclass Elite Cricket Academy is where the region's most
+                promising young cricketers are tested, challenged and developed
+                to reach professional standards.
               </p>
               <p>
-                Our coaching team, including <strong>Uzi Arif</strong> &{' '}
-                <strong>Fahim Qureshi</strong>, will assess your technical skills, tactical
-                awareness and mental approach during the official trials.
+                Our coaching team, including <strong>Uzi Arif</strong> &{" "}
+                <strong>Fahim Qureshi</strong>, will assess your technical
+                skills, tactical awareness and mental approach during the
+                official trials.
               </p>
 
               <h4>Eligibility:</h4>
               <p>
-                Open to <strong>BOYS aged 8-13 and 14-18 only</strong>. A dedicated Girls Academy
-                will be announced soon.
+                Open to <strong>BOYS aged 8-13 and 14-18 only</strong>. A
+                dedicated Girls Academy will be announced soon.
               </p>
 
               <h4>Acceptance & Payment:</h4>
               <p>
-                Selected players will join a 10-week high-performance course. Programme starts
-                January 2026. Confirmation and payment are due within 7 days of selection to secure
-                your spot.
+                Selected players will join a 10-week high-performance course.
+                Programme starts January 2026. Confirmation and payment are due
+                within 7 days of selection to secure your spot.
               </p>
 
               <h4>Trial Details:</h4>
               <ul>
                 <li>
-                  <strong>Trial 1:</strong> Tuesday 26th November 2025 (Ages 8–13: 5–6:30 PM |
-                  Ages 14–18: 6:30–8 PM)
+                  <strong>Trial 1:</strong> Tuesday 26th November 2025 (Ages
+                  8–13: 5–6:30 PM | Ages 14–18: 6:30–8 PM)
                 </li>
                 <li>
-                  <strong>Trial 2:</strong> Tuesday 17th December 2025 (Ages 8–13: 5–6:30 PM |
-                  Ages 14–18: 6:30–8 PM)
+                  <strong>Trial 2:</strong> Tuesday 17th December 2025 (Ages
+                  8–13: 5–6:30 PM | Ages 14–18: 6:30–8 PM)
                 </li>
                 <li>
-                  <strong>Venue:</strong> Lynch Hill Enterprise Academy, Stoke Road, Slough, SL2
-                  5AY
+                  <strong>Venue:</strong> Lynch Hill Enterprise Academy, Stoke
+                  Road, Slough, SL2 5AY
                 </li>
               </ul>
 
               <h4>What to Expect:</h4>
               <ul>
-                <li>Technical ability — precision, consistency, adaptability</li>
+                <li>
+                  Technical ability — precision, consistency, adaptability
+                </li>
                 <li>Tactical awareness — decision-making, discipline</li>
                 <li>Mental approach — focus, resilience, attitude</li>
               </ul>
 
               <p>
-                <strong>Only standout performers</strong> will receive invitations to join the Elite
-                Programme.
+                <strong>Only standout performers</strong> will receive
+                invitations to join the Elite Programme.
               </p>
 
               <h4>Programme Overview:</h4>
               <ul>
                 <li>
-                  A unique experience to train weekly with the world-renowned Masterclass coaching
-                  team
+                  A unique experience to train weekly with the world-renowned
+                  Masterclass coaching team
                 </li>
-                <li>Led by: Uzi Arif, Fahim Qureshi & Masterclass coaching team</li>
+                <li>
+                  Led by: Uzi Arif, Fahim Qureshi & Masterclass coaching team
+                </li>
               </ul>
 
               <p>
                 <strong>Contact:</strong> TEL: 07344331415
               </p>
               <p>
-                <strong>Website:</strong>{' '}
+                <strong>Website:</strong>{" "}
                 <a
                   href="https://www.masterclasscricket.co.uk"
                   target="_blank"
@@ -189,7 +212,7 @@ const Popup = ({
                 </a>
               </p>
               <p>
-                <strong>Register here:</strong>{' '}
+                <strong>Register here:</strong>{" "}
                 <a
                   href="https://masterclass-cricket.classforkids.io"
                   target="_blank"
@@ -215,7 +238,7 @@ const Popup = ({
             <button
               disabled={!accepted}
               onClick={() => {
-                window.open(bookingUrl, '_blank');
+                window.open(bookingUrl, "_blank");
                 setShowModal(false);
               }}
               className={`${styles.bookNowBtn} ${
@@ -224,11 +247,6 @@ const Popup = ({
             >
               Book Now
             </button>
-
- 
-
-           
-            
           </div>
         </div>
       )}

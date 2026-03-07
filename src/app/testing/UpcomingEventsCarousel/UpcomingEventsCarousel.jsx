@@ -2,7 +2,6 @@
 
 import styles from "./UpcomingEventsCarousel.module.css";
 
-
 import Link from "next/link";
 
 const events = [
@@ -62,7 +61,11 @@ export default function UpcomingEventsCarousel() {
           {scrollingEvents.map((event, index) => (
             <article key={index} className={styles.eventCard}>
               <div className={styles.eventImageWrapper}>
-                <img src={event.image} alt={event.title} className={styles.eventImage} />
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className={styles.eventImage}
+                />
                 <div className={styles.eventDateBadge}>
                   <span className={styles.eventDateDay}>{event.day}</span>
                   <span className={styles.eventDateMonth}>{event.month}</span>
@@ -83,7 +86,10 @@ export default function UpcomingEventsCarousel() {
                   </div>
                 </div>
 
-                <Link href={`/events/${event.slug}`} className={styles.eventBtn}>
+                <Link
+                  href={`/events/${event.slug}`}
+                  className={styles.eventBtn}
+                >
                   Know More
                 </Link>
               </div>

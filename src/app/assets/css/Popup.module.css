@@ -218,7 +218,6 @@
   .closeBtn {
     /* border: 2px solid red; */
     font-size: 15px;
-    
   }
 }
 
@@ -235,7 +234,6 @@
     max-width: 95%;
     margin-top: 13%;
     max-height: 55vh;
-
   }
 
   .redirectBtn {
@@ -257,17 +255,14 @@
     max-width: 350px;
     padding: 25px 18px;
     top: 50%;
-  
+
     border-radius: 14px;
-
   }
-
-  
 
   .popupImg {
     width: 100%;
     /* max-width: 400%; */
-    max-height:70vh ;
+    max-height: 70vh;
     margin-top: 7%;
     border-radius: 20px;
     /* border: 2px solid red; */
@@ -279,7 +274,6 @@
   }
 
   .closeBtn {
-    
     font-size: 18px;
     /* border: 2px solid red; */
     /* padding: 6px 8px; */
@@ -308,7 +302,6 @@
   }
 
   .closeBtn {
-    
     font-size: 18px;
   }
 }

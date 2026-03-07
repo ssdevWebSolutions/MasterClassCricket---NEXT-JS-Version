@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import styles from '../assets/css/AboutSection.module.css';
+import React, { useEffect, useRef } from "react";
+import Image from "next/image";
+import styles from "../assets/css/AboutSection.module.css";
 
 const AboutSection = () => {
   const sectionRef = useRef(null);
@@ -10,13 +10,15 @@ const AboutSection = () => {
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: "0px 0px -50px 0px",
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const fadeElements = entry.target.querySelectorAll(`.${styles.fadeIn}`);
+          const fadeElements = entry.target.querySelectorAll(
+            `.${styles.fadeIn}`,
+          );
           fadeElements.forEach((element, index) => {
             setTimeout(() => {
               element.classList.add(styles.animated);
@@ -65,23 +67,24 @@ const AboutSection = () => {
               What We Specialise In
             </h2>
             <p className={`${styles.fadeIn} ${styles.delay2}`}>
-              At Masterclass Cricket, we combine advanced biomechanics with professional playing
-              experience to develop elite cricketers. Our unique "linking" method ensures players not only
-              understand technique but feel the difference in their batting, fast bowling, and spin
-              bowling performance.
+              At Masterclass Cricket, we combine advanced biomechanics with
+              professional playing experience to develop elite cricketers. Our
+              unique "linking" method ensures players not only understand
+              technique but feel the difference in their batting, fast bowling,
+              and spin bowling performance.
             </p>
             <p className={`${styles.fadeIn} ${styles.delay2}`}>
-              We pride ourselves on identifying technical adjustments and designing innovative drills to
-              accelerate improvement.
+              We pride ourselves on identifying technical adjustments and
+              designing innovative drills to accelerate improvement.
             </p>
 
             <h2 className={`${styles.fadeIn} ${styles.delay3}`}>
               A Complete Player Development System
             </h2>
             <p className={`${styles.fadeIn} ${styles.delay3}`}>
-              For over 10 years, Masterclass Cricket has been a trusted coaching brand, attracting players
-              from around the world. Our reputation for elite coaching and international success speaks
-              for itself.
+              For over 10 years, Masterclass Cricket has been a trusted coaching
+              brand, attracting players from around the world. Our reputation
+              for elite coaching and international success speaks for itself.
             </p>
           </div>
         </div>
