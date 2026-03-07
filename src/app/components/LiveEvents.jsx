@@ -7,7 +7,7 @@ const LiveEvents = () => {
     {
       id: 1,
       title: "10-Week Coaching Programme",
-      image: "/Easter Half Term V1.jpg", // Update with your actual image path
+      image: "/Easter Half Term V1.png", // Update with your actual image path
       alt: "10-Week Cricket Coaching Programme for ages 7-13",
       bookingUrl: "https://masterclass-cricket.classforkids.io", // Update with actual booking link
     },
