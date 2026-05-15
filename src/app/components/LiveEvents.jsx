@@ -7,9 +7,9 @@ const LiveEvents = () => {
     {
       id: 1,
       title: "10-Week Coaching Programme",
-      image: "/Easter Half Term V1.png", // Update with your actual image path
+      image: "/May_half.jpeg", // Update with your actual image path
       alt: "10-Week Cricket Coaching Programme for ages 7-13",
-      bookingUrl: "https://masterclass-cricket.classforkids.io", // Update with actual booking link
+      // bookingUrl: "", // Update with actual booking link
     },
     // {
     //   id: 2,
@@ -20,8 +20,17 @@ const LiveEvents = () => {
     // }
   ];
 
-  const handleBookNow = (url) => {
-    window.location.href = url;
+  // const handleBookNow = (url) => {
+  //   window.location.href = url;
+  // };
+
+  const handleBookNow = () => {
+    const phoneNumber = "447961692226"; // UK country code + number without +
+    const message = encodeURIComponent(
+      "Hi, I would like to book the May Half Term Cricket Camp.",
+    );
+
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   };
 
   return (
@@ -46,8 +55,8 @@ const LiveEvents = () => {
               </div>
               <button
                 className={styles.bookButton}
-                onClick={() => handleBookNow(event.bookingUrl)}
-                aria-label={`Book now for ${event.title}`}
+                onClick={() => handleBookNow()}
+                // aria-label={`Book now for ${event.title}`}
               >
                 Book Now
               </button>
