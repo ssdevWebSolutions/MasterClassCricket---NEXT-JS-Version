@@ -7,17 +7,17 @@ const LiveEvents = () => {
     {
       id: 1,
       title: "10-Week Coaching Programme",
-      image: "/May_half.jpeg", // Update with your actual image path
+      image: "/MMCamp-1.jpg", // Update with your actual image path
       alt: "10-Week Cricket Coaching Programme for ages 7-13",
-      // bookingUrl: "", // Update with actual booking link
+      // bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
     },
-    // {
-    //   id: 2,
-    //   title: 'Elite Cricket Academy 2026',
-    //   image: '/EliteCricketCoaching.png', // Update with your actual image path
-    //   alt: '2026 Masterclass Elite Cricket Academy',
-    //   bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
-    // }
+    {
+      id: 2,
+      title: "Elite Cricket Academy 2026",
+      image: "/MMCamp-2.jpg", // Update with your actual image path
+      alt: "2026 Masterclass Elite Cricket Academy",
+      // bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
+    },
   ];
 
   // const handleBookNow = (url) => {
@@ -27,7 +27,7 @@ const LiveEvents = () => {
   const handleBookNow = () => {
     const phoneNumber = "447961692226"; // UK country code + number without +
     const message = encodeURIComponent(
-      "Hi, I would like to book the May Half Term Cricket Camp.",
+      "Hi, I would like to book the Summer Cricket Camp.",
     );
 
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
