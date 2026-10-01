@@ -11,13 +11,13 @@ const LiveEvents = () => {
       alt: "Oct Camp",
       // bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
     },
-    // {
-    //   id: 2,
-    //   title: "Elite Cricket Academy 2026",
-    //   image: "/MMCamp-2.jpg", // Update with your actual image path
-    //   alt: "2026 Masterclass Elite Cricket Academy",
-    //   // bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
-    // },
+    {
+      id: 2,
+      title: "Girls Monday Camp",
+      image: "/events/Girls_monday_camp.jpeg", // Update with your actual image path
+      alt: "Girls Monday Camp",
+      // bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
+    },
   ];
 
   // const handleBookNow = (url) => {
