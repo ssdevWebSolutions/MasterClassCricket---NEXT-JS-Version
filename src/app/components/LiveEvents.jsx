@@ -7,14 +7,14 @@ const LiveEvents = () => {
     {
       id: 1,
       title: "10-Week Coaching Programme",
-      image: "/events/oct_camp.jpeg", // Update with your actual image path
+      image: "/events/OCT_Camp_Format.jpg", // Update with your actual image path
       alt: "Oct Camp",
       // bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
     },
     {
       id: 2,
       title: "Girls Monday Camp",
-      image: "/events/Girls_monday_camp.jpeg", // Update with your actual image path
+      image: "/events/Girls_monday_camp-format.jpg", // Update with your actual image path
       alt: "Girls Monday Camp",
       // bookingUrl: 'https://masterclass-cricket.classforkids.io' // Update with actual booking link
     },
